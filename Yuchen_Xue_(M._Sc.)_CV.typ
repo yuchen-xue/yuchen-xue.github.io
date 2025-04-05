@@ -17,7 +17,6 @@
 #let design-section-titles-bold = false
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "moderncv"
 #let design-section-titles-vertical-space-above = 0.55cm
 #let design-section-titles-vertical-space-below = 0.3cm
 #let design-section-titles-small-caps = false
@@ -205,33 +204,18 @@
     breakable: false,
     width: 100%,
     [
-      #if design-section-titles-type == "moderncv" [
-        #two-col(
-          alignments: (right, left),
-          left-column-width: design-entries-date-and-location-width,
-          right-column-width: 1fr,
-          left-content: [
-            #align(horizon, box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles))
-          ],
-          right-content: [
-            #section-title
-          ]
-        )
+      #two-col(
+        alignments: (right, left),
+        left-column-width: design-entries-date-and-location-width,
+        right-column-width: 1fr,
+        left-content: [
+          #align(horizon, box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles))
+        ],
+        right-content: [
+          #section-title
+        ]
+      )
 
-      ] else [
-        #box(
-          [
-            #section-title
-            #if design-section-titles-type == "with-parial-line" [
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ] else if design-section-titles-type == "with-full-line" [
-
-              #v(design-text-font-size * 0.4)
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ]
-          ]
-        )
-      ]
      ] + v(1em),
   )
   #v(-1em)
@@ -253,12 +237,7 @@
 
 // Last updated date text:
 #if design-page-show-last-updated-date {
-  let dx
-  if design-section-titles-type == "moderncv" {
-    dx = 0cm
-  } else {
-    dx = -design-entries-left-and-right-margin
-  }
+  let dx = 0cm
   place(
     top + right,
     dy: -design-page-top-margin / 2,
@@ -317,52 +296,30 @@
   alignments: (auto, design-text-date-and-location-column-alignment),
   column-gutter: design-entries-horizontal-space-between-columns,
 ) = (
-  if design-section-titles-type == "moderncv" [
-    #two-col(
-      left-column-width: right-column-width,
-      right-column-width: left-column-width,
-      left-content: right-content,
-      right-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      alignments: (design-text-date-and-location-column-alignment, auto),
-    )
-  ] else [
-    #block(
-      [
-        #two-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
+  two-col(
+    left-column-width: right-column-width,
+    right-column-width: left-column-width,
+    left-content: right-content,
+    right-content: [
+      #block(
+        [
+          #left-content
+        ],
+        inset: (
+          left: design-entries-left-and-right-margin,
+          right: design-entries-left-and-right-margin,
+        ),
+        breakable: design-entries-allow-page-break-in-entries,
+        width: 100%,
+      )
+    ],
+    alignments: (design-text-date-and-location-column-alignment, auto),
+  )
 )
 
 #let one-col-entry(content: "") = [
   #let left-space = design-entries-left-and-right-margin
-  #if design-section-titles-type == "moderncv" [
-    #(left-space = left-space + design-entries-date-and-location-width + design-entries-horizontal-space-between-columns)
-  ]
+  #(left-space = left-space + design-entries-date-and-location-width + design-entries-horizontal-space-between-columns)
   #block(
     [#set par(spacing: design-text-leading); #content],
     breakable: design-entries-allow-page-break-in-entries,
