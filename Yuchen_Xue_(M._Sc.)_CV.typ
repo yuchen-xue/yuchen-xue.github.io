@@ -5,8 +5,7 @@
 #let locale-catalog-page-numbering-style = context { "Yuchen Xue (M. Sc.) - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
 #let locale-catalog-last-updated-date-style = "Last updated in Apr. 2025"
 #let locale-catalog-language = "en"
-#let design-page-size = "us-letter"
-#let design-section-titles-font-size = 1.4em
+#let design-page-size = "a4"
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
 #let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
@@ -34,7 +33,6 @@
 #let design-header-connections-font-family = "Fontin"
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
-#let design-header-use-icons-for-connections = true
 #let design-header-horizontal-space-between-connections = 0.5cm
 #let design-header-separator-between-connections = ""
 #let design-header-alignment = left
@@ -56,7 +54,6 @@
 #let design-page-show-last-updated-date = true
 #let design-page-show-page-numbering = true
 #let design-links-underline = true
-#let design-entry-types-education-entry-degree-column-width = 1cm
 #let date = datetime.today()
 
 // Metadata:
