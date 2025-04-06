@@ -20,7 +20,7 @@
 #let design-section-titles-vertical-space-above = 0.55cm
 #let design-section-titles-vertical-space-below = 0.3cm - 0.5em
 #let design-section-titles-small-caps = false
-#let design-links-use-external-link-icon = false
+#let design-links-use-external-link-icon = true
 #let design-text-font-size = 10pt
 #let design-text-leading = 0.6em
 #let design-text-font-family = "Fontin"
@@ -655,7 +655,7 @@
     [Implementation of the Spring Boot backend;],
     [Deployment of an object detection model using TensorFlow for Java;],
     [Implementation of MySQL database and Spring Database Connector for storing detection result.],
-    [Available on Github #link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]],
+    [Available on Github \(#link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]\)],
     [#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],
   )
 )
