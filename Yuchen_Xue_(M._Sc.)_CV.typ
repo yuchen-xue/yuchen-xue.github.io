@@ -132,29 +132,6 @@
 )
 
 // Entry utilities:
-#let three-col(
-  left-column-width: 1fr,
-  middle-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (auto, auto, auto),
-) = [
-  #block(
-    grid(
-      columns: (left-column-width, middle-column-width, right-column-width),
-      column-gutter: design-entries-horizontal-space-between-columns,
-      align: alignments,
-      ([#set par(spacing: design-text-leading); #left-content]),
-      ([#set par(spacing: design-text-leading); #middle-content]),
-      ([#set par(spacing: design-text-leading); #right-content]),
-    ),
-    breakable: true,
-    width: 100%,
-  )
-]
-
 #let two-col(
   left-column-width: 1fr,
   right-column-width: design-entries-date-and-location-width,
@@ -306,7 +283,7 @@
   let starting-index = 0
   while (starting-index < connections-list.len()) {
     let left-sum-right-margin
-    if type(page.margin) == "dictionary" {
+    if type(page.margin) == dictionary {
       left-sum-right-margin = page.margin.left + page.margin.right
     } else {
       left-sum-right-margin = page.margin * 4
@@ -331,58 +308,6 @@
   align(list-of-connections.join(linebreak()), design-header-alignment)
   v(design-header-vertical-space-between-connections-and-first-section - design-section-titles-vertical-space-above)
 }
-
-#let three-col-entry(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (left, auto, right),
-) = (
-  if design-section-titles-type == "moderncv" [
-    #three-col(
-      left-column-width: right-column-width,
-      middle-column-width: left-column-width,
-      right-column-width: 1fr,
-      left-content: right-content,
-      middle-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      right-content: middle-content,
-      alignments: (design-text-date-and-location-column-alignment, left, auto),
-    )
-  ] else [
-    #block(
-      [
-        #three-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          middle-content: middle-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
-)
 
 #let two-col-entry(
   left-column-width: 1fr,
