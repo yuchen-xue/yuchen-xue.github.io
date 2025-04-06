@@ -220,16 +220,15 @@
   #v(design-section-titles-vertical-space-below)
 ]
 
-// Links:
-#let original-link = link
-#let link(url, body) = {
+// Customable links used for content of entries:
+#let link-entry-content(url, body) = {
   body = [#if design-links-underline [#underline(body)] else [#body]]
   body = [#if design-links-use-external-link-icon [#body#h(design-text-font-size/4)#box(
         fa-icon("external-link", size: 0.7em),
         baseline: -10%,
       )] else [#body]]
   body = [#set text(fill: design-colors-links);#body]
-  original-link(url, body)
+  link(url, body)
 }
 
 // Last updated date text:
@@ -543,7 +542,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is a project about analyzing and predicting real-world energy consumption data using Generalized Additive Model \(GAM\). Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Development of a GAM model with high capability of generalization;],[The model has a MAPE \(mean absolute percentage error\) value of 14.89;],[A report is available online \(#link("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],[#strong[Keynotes]: R language, Regression model, Generalized Additive Model \(GAM\)],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Development of a GAM model with high capability of generalization;],[The model has a MAPE \(mean absolute percentage error\) value of 14.89;],[A report is available online \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],[#strong[Keynotes]: R language, Regression model, Generalized Additive Model \(GAM\)],)
   ],
 )
 
@@ -558,7 +557,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is a website that contains my study note and projects of R language. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Developed of a website using Quarto \(#link("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],[Automated deployment using Github Action],[#strong[Keynotes]: Quarto, R language, Github Actions],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Developed of a website using Quarto \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],[Automated deployment using Github Action],[#strong[Keynotes]: Quarto, R language, Github Actions],)
   ],
 )
 
@@ -577,7 +576,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [A Restful API for object detection based on Spring Framework and MySql server. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implementation of the Spring Boot backend;],[Deployment of an object detection model using TensorFlow for Java;],[Implementation of MySQL database and Spring Database Connector for storing detection result.],[Available on Github #link("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]],[#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implementation of the Spring Boot backend;],[Deployment of an object detection model using TensorFlow for Java;],[Implementation of MySQL database and Spring Database Connector for storing detection result.],[Available on Github #link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]],[#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],)
   ],
 )
 
@@ -626,10 +625,7 @@
   #v(-design-text-leading)
 #v(design-highlights-top-margin);Sheng-Luen Chung, #strong[#emph[Yuchen Xue]], Shih-Chao Chien, Ruei-Shan Chan
 
-#v(design-highlights-top-margin - design-text-leading)#link("https://doi.org/10.1109/AVSS.2019.8909867")[10.1109/AVSS.2019.8909867] (16th IEEE International Conference on Advanced Video and Signal Based Surveillance \(AVSS\))  ],
-  right-content: [
-    Nov. 2019
-  ],
+#v(design-highlights-top-margin - design-text-leading)#link-entry-content("https://doi.org/10.1109/AVSS.2019.8909867")[10.1109/AVSS.2019.8909867] (16th IEEE International Conference on Advanced Video and Signal Based Surveillance \(AVSS\))  ],
 )
 
 #v(design-entries-vertical-space-between-entries)
@@ -643,7 +639,7 @@
   #v(-design-text-leading)
 #v(design-highlights-top-margin);Kun-Lin Tsai, Fang-Yie Leu, Yi-Fung Huang, Chi Yang, Cheng-Hsin Chang, King-Shing Yip, #strong[#emph[Yuchen Xue]], Guan-Chi Lai
 
-#v(design-highlights-top-margin - design-text-leading)#link("https://doi.org/10.1109/IMIS.2016.73")[10.1109/IMIS.2016.73] (10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing \(IMIS\))  ],
+#v(design-highlights-top-margin - design-text-leading)#link-entry-content("https://doi.org/10.1109/IMIS.2016.73")[10.1109/IMIS.2016.73] (10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing \(IMIS\))  ],
 )
 
 
