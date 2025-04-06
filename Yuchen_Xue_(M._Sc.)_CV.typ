@@ -17,7 +17,7 @@
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
 #let design-section-titles-vertical-space-above = 0.55cm
-#let design-section-titles-vertical-space-below = 0.3cm
+#let design-section-titles-vertical-space-below = 0.3cm - 0.5em
 #let design-section-titles-small-caps = false
 #let design-links-use-external-link-icon = false
 #let design-text-font-size = 10pt
@@ -31,6 +31,7 @@
 #let design-header-name-font-size = 25pt
 #let design-header-name-bold = false
 #let design-header-connections-font-family = "Fontin"
+#let design-header-vertical-space-before-name = 1.5em
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
 #let design-header-horizontal-space-between-connections = 0.5cm
@@ -166,7 +167,7 @@
     fill: design-colors-name,
   )
   // Vertical space before the name
-  #v(1.5em)
+  #v(design-header-vertical-space-before-name)
   #it.body
   // Vertical space after the name
   #v(design-header-vertical-space-between-name-and-connections)
@@ -213,11 +214,10 @@
         ]
       )
 
-     ] + v(1em),
+     ],
   )
-  #v(-1em)
   // Vertical space after the section title
-  #v(design-section-titles-vertical-space-below - 0.5em)
+  #v(design-section-titles-vertical-space-below)
 ]
 
 // Links:
