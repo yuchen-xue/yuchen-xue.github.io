@@ -300,20 +300,6 @@
   )
 )
 
-#let one-col-entry(content: "") = [
-  #let left-space = design-entries-left-and-right-margin
-  #(left-space = left-space + design-entries-date-and-location-width + design-entries-horizontal-space-between-columns)
-  #block(
-    [#set par(spacing: design-text-leading); #content],
-    breakable: design-entries-allow-page-break-in-entries,
-    inset: (
-      left: left-space,
-      right: design-entries-left-and-right-margin,
-    ),
-    width: 100%,
-  )
-]
-
 #two-col(
   alignments: (center, left),
   left-content: [
@@ -437,32 +423,32 @@
 == Keynote Technical Skills
 
 
-#one-col-entry(
-  content: [#strong[Programming Languages:] Proficient with Python; good understanding with Java, C++ and R]
+#two-col(
+  right-content: [#strong[Programming Languages:] Proficient with Python; good understanding with Java, C++ and R]
 )
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Machine Learning and Data Science Packages:] Good understanding with Pytorch, Tensorflow, OpenCV, Matplotlib, MySQL Server, Numpy, Pandas, Skikit Learn, Quarto]
+#two-col(
+  right-content: [#strong[Machine Learning and Data Science Packages:] Good understanding with Pytorch, Tensorflow, OpenCV, Matplotlib, MySQL Server, Numpy, Pandas, Skikit Learn, Quarto]
 )
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Programming Frameworks and Tools:] Good understanding with Docker Compose, Spring Boot, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog]
+#two-col(
+  right-content: [#strong[Programming Frameworks and Tools:] Good understanding with Docker Compose, Spring Boot, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog]
 )
 
 
 == Language Skills
 
 
-#one-col-entry(
-  content: [#strong[English: Fluent \(C1\):] IETLS band 7 \(CERF C1-Level\). Date of the certification was issued: 26.03.2019]
+#two-col(
+  right-content: [#strong[English: Fluent \(C1\):] IETLS band 7 \(CERF C1-Level\). Date of the certification was issued: 26.03.2019]
 )
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[German: Fluent \(C1\):] CERF C1 Level. Issued by Sprachzentrum der Universtität Rostock on 19.02.2025]
+#two-col(
+  right-content: [#strong[German: Fluent \(C1\):] CERF C1 Level. Issued by Sprachzentrum der Universtität Rostock on 19.02.2025]
 )
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Chinese: Native speaker \(C2\):] Native Mandarin speaker]
+#two-col(
+  right-content: [#strong[Chinese: Native speaker \(C2\):] Native Mandarin speaker]
 )
 
 
@@ -633,12 +619,12 @@
 == Miscellaneous
 
 
-#one-col-entry(
-  content: [- Hobbies: Snowboarding, Hiking & trekking, Cycling, Badminton],
+#two-col(
+  right-content: [- Hobbies: Snowboarding, Hiking & trekking, Cycling, Badminton],
 )
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- German driving license #strong[#emph[\(Class B\)]]],
+#two-col(
+  right-content: [- German driving license #strong[#emph[\(Class B\)]]],
 )
 
 
