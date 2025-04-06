@@ -2,8 +2,9 @@
 #import "@preview/fontawesome:0.5.0": fa-icon
 
 #let name = "Yuchen Xue (M. Sc.)"
+#let date = datetime.today()
 #let locale-catalog-page-numbering-style = context { "Yuchen Xue (M. Sc.) - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Apr. 2025"
+#let locale-catalog-last-update-style = [_Last updated on #date.display("[day] [month repr:short]. [year]")_]
 #let locale-catalog-language = "en"
 #let design-page-size = "a4"
 #let design-colors-text = rgb(0, 0, 0)
@@ -55,7 +56,6 @@
 #let design-page-show-last-updated-date = true
 #let design-page-show-page-numbering = true
 #let design-links-underline = true
-#let date = datetime.today()
 
 // Metadata:
 #set document(author: name, title: name + "'s CV", date: date)
@@ -234,13 +234,12 @@
 
 // Last updated date text:
 #if design-page-show-last-updated-date {
-  let dx = 0cm
   place(
     top + right,
+    dx: 0cm,
     dy: -design-page-top-margin / 2,
-    dx: dx,
     text(
-      [_#locale-catalog-last-updated-date-style _],
+      locale-catalog-last-update-style,
       fill: design-colors-last-updated-date-and-page-numbering,
       size: 0.9em,
     ),
