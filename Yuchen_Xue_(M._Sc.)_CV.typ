@@ -273,24 +273,23 @@
 
 #two-col(
   alignments: (center, left),
-  left-content: [
-    #align(
-      center + horizon,
-      pad(x: 4pt, image("profile_picture.jpg", width: design-header-photo-width)),
-    )
-  ],
+  left-content: image(
+    "profile_picture.jpg", 
+    width: design-header-photo-width
+  ),
   right-content: [
 = Yuchen Xue \(M. Sc.\)
 
 // Print connections:
 #let connections-list = (
   [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Rostock, Germany],
-  [#box(original-link("mailto:yuchen.xue@example.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)yuchen.xue\@example.com])],
-  [#box(original-link("tel:+49-1234-5678")[#fa-icon("phone", size: 0.9em) #h(0.05cm)+49 1234 5678])],
-  [#box(original-link("https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6")[#fa-icon("link", size: 0.9em) #h(0.05cm)yuchen-xue.notion.site\/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6])],
-  [#box(original-link("https://linkedin.com/in/sean-yuchen-xue")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)sean-yuchen-xue])],
-  [#box(original-link("https://github.com/yuchen-xue")[#fa-icon("github", size: 0.9em) #h(0.05cm)yuchen-xue])],
-  [#box(original-link("https://researchgate.net/profile/Yuchen-Xue-6")[#fa-icon("researchgate", size: 0.9em) #h(0.05cm)Yuchen-Xue-6])],
+  [#box(link("mailto:yuchen.xue@example.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)yuchen.xue\@example.com])],
+  [#box(link("tel:+49-1234-5678")[#fa-icon("phone", size: 0.9em) #h(0.05cm)+49 1234 5678])],
+  [#box(link("https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6")[#fa-icon("link", size: 0.9em) #h(0.05cm)yuchen-xue.notion.site\/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6])],
+  [#box(link("https://linkedin.com/in/sean-yuchen-xue")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)sean-yuchen-xue])],
+  [#box(link("https://github.com/yuchen-xue")[#fa-icon("github", size: 0.9em) #h(0.05cm)yuchen-xue])],
+  [#box(link("https://researchgate.net/profile/Yuchen-Xue-6")[#fa-icon("researchgate", size: 0.9em) #h(0.05cm)Yuchen-Xue-6])],
+  [#box(link("https://www.xing.com/profile/Yuchen_Xue2")[#fa-icon("xing", size: 0.9em) #h(0.05cm)Yuchen_Xue2])],
 )
 #connections(connections-list)
 
