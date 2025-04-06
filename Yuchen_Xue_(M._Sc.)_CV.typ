@@ -107,24 +107,12 @@
   leading: design-text-leading,
   justify: justify,
 )
-#set enum(
-  spacing: design-entries-vertical-space-between-entries,
-)
 
-// Highlights settings:
-#let highlights(..content) = {
-  list(
-    ..content,
-    marker: design-highlights-bullet,
-    spacing: design-highlights-vertical-space-between-highlights,
-    indent: design-highlights-left-margin,
-    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
-  )
-}
-#show list: set list(
+// Bullet list settings for entries:
+#set list(
   marker: design-highlights-bullet,
-  spacing: 0pt,
-  indent: 0pt,
+  spacing: design-highlights-vertical-space-between-highlights,
+  indent: design-highlights-left-margin,
   body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
 )
 
@@ -368,7 +356,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [I developed a deep-learning-based zero-shot solution for industry-level defect detection on different types of machinery parts. This solution features the comparison of image samples based on image segmentation technologies. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Solution for precise image segmentation of irregular machinery parts using computer vision algorithms;],[97.6\% precision on recognition tasks that was tested by a pre-defined dataset;],[Deployment using Docker Compose;],[Collaborated with my colleagues using a version control repository;],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Solution for precise image segmentation of irregular machinery parts using computer vision algorithms;],[97.6\% precision on recognition tasks that was tested by a pre-defined dataset;],[Deployment using Docker Compose;],[Collaborated with my colleagues using a version control repository;],)
   ],
 )
 
@@ -386,7 +374,7 @@
     #strong[University of Rostock], M.Sc. in Computational Electrical Engineering -- Rostock \(Germany\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([#strong[Keynotes]: Computational methods, Image processing],)
+    #v(design-highlights-top-margin);#list([#strong[Keynotes]: Computational methods, Image processing],)
   ],
 )
 
@@ -400,7 +388,7 @@
     #strong[Rhein-Waal University of Applied Science], M.Sc. in Information Engineering and Computer Science -- Kleve \(Germany\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([#strong[Keynotes]: Data engineering, Simulation technologies],)
+    #v(design-highlights-top-margin);#list([#strong[Keynotes]: Data engineering, Simulation technologies],)
   ],
 )
 
@@ -414,7 +402,7 @@
     #strong[University of Groningen], Exchange program in the Faculty of Science and Engineering -- Groningen \(the Netherlands\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([#strong[Keynotes]: Parallel Computing, Scalable Computing],)
+    #v(design-highlights-top-margin);#list([#strong[Keynotes]: Parallel Computing, Scalable Computing],)
   ],
 )
 
@@ -428,7 +416,7 @@
     #strong[National Taiwan University of Science and Technology], M.Sc. in Electrical Engineering -- Taipei \(Taiwan\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Top technical university in Taiwan],[#strong[Keynotes]: Deep Learning, Image processing, Data engineering],)
+    #v(design-highlights-top-margin);#list([Top technical university in Taiwan],[#strong[Keynotes]: Deep Learning, Image processing, Data engineering],)
   ],
 )
 
@@ -442,7 +430,7 @@
     #strong[Thunhai University], B.Sc. in Electrical Engineering -- Taipei \(Taiwan\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([#strong[Keynotes]: Verilog HDL, Semiconductor, Microelectronics],)
+    #v(design-highlights-top-margin);#list([#strong[Keynotes]: Verilog HDL, Semiconductor, Microelectronics],)
   ],
 )
 
@@ -493,7 +481,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is an academic survey of different deep-learning based face recognition models, aiming at bringing insights to future researches in the field of deep learning. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Literal survey of numerous face recognition solutions],[Summary of the fundamental differences of deep learning models],[Use of experimental method for comparing the performance of different models],[#strong[Keynotes]: Face recognition, deep learning, PyTorch, Tensorflow],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Literal survey of numerous face recognition solutions],[Summary of the fundamental differences of deep learning models],[Use of experimental method for comparing the performance of different models],[#strong[Keynotes]: Face recognition, deep learning, PyTorch, Tensorflow],)
   ],
 )
 
@@ -508,7 +496,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is a solution to the challenge of person re-identification \(Re-ID\) problem. The Re-ID problem is about recognizing and matching pedestrian with different appearances across different cameras. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Development of a solution to Re-ID problem using computer vision and deep learning methods],[Contributed to the relative academic paper as the 2nd co-author. The paper accepted by the 16th IEEE International Conference on Advanced Video and Signal-based Surveillance \(AVSS\)],[Delivered an academic speech on this conference],[Use of experimental method for comparing the performance of different models],[#strong[Keynotes]: Cross-camera recognition, Python, deep learning, TensorFlow],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Development of a solution to Re-ID problem using computer vision and deep learning methods],[Contributed to the relative academic paper as the 2nd co-author. The paper accepted by the 16th IEEE International Conference on Advanced Video and Signal-based Surveillance \(AVSS\)],[Delivered an academic speech on this conference],[Use of experimental method for comparing the performance of different models],[#strong[Keynotes]: Cross-camera recognition, Python, deep learning, TensorFlow],)
   ],
 )
 
@@ -523,7 +511,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [A real-time object detection solution for real-time video streams written in C++. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Improvement of 20\% in precision compared to the base model],[Improvement on small, obscured, and overlapping objects],[I was in charge of data collection, sample labeling, and training a model],[Training of a reliable model with limited data using transfer learning technique],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Improvement of 20\% in precision compared to the base model],[Improvement on small, obscured, and overlapping objects],[I was in charge of data collection, sample labeling, and training a model],[Training of a reliable model with limited data using transfer learning technique],)
   ],
 )
 
@@ -542,7 +530,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is a project about analyzing and predicting real-world energy consumption data using Generalized Additive Model \(GAM\). Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Development of a GAM model with high capability of generalization;],[The model has a MAPE \(mean absolute percentage error\) value of 14.89;],[A report is available online \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],[#strong[Keynotes]: R language, Regression model, Generalized Additive Model \(GAM\)],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Development of a GAM model with high capability of generalization;],[The model has a MAPE \(mean absolute percentage error\) value of 14.89;],[A report is available online \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],[#strong[Keynotes]: R language, Regression model, Generalized Additive Model \(GAM\)],)
   ],
 )
 
@@ -557,7 +545,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [This is a website that contains my study note and projects of R language. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Developed of a website using Quarto \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],[Automated deployment using Github Action],[#strong[Keynotes]: Quarto, R language, Github Actions],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Developed of a website using Quarto \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],[Automated deployment using Github Action],[#strong[Keynotes]: Quarto, R language, Github Actions],)
   ],
 )
 
@@ -576,7 +564,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [A Restful API for object detection based on Spring Framework and MySql server. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implementation of the Spring Boot backend;],[Deployment of an object detection model using TensorFlow for Java;],[Implementation of MySQL database and Spring Database Connector for storing detection result.],[Available on Github #link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]],[#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([Implementation of the Spring Boot backend;],[Deployment of an object detection model using TensorFlow for Java;],[Implementation of MySQL database and Spring Database Connector for storing detection result.],[Available on Github #link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]],[#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],)
   ],
 )
 
@@ -591,7 +579,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [A hardware and software integration using Raspberry Pi. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([The design of the whole software and hardware structure;],[The implementation of a voice recognition technique through cloud platform;],[The implementation of a QR code reading technique;],[The implementation of smile detection based on OpenCV.],[#strong[Keynotes]: Raspberry Pi, OpenCV, Cloud platform],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([The design of the whole software and hardware structure;],[The implementation of a voice recognition technique through cloud platform;],[The implementation of a QR code reading technique;],[The implementation of smile detection based on OpenCV.],[#strong[Keynotes]: Raspberry Pi, OpenCV, Cloud platform],)
   ],
 )
 
@@ -606,7 +594,7 @@
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [A simple quadcopter based on Arduino. Highlights:])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([A collaboration work of assemble of a quadcopter from scratch],[Programming, design of control system and testing of the quadcopter],[This project won the best Final Year Project of the Department of Electrical Engineering of Thunhai University],[#strong[Keynotes]: Control system, Unmanned aerial vehicle, Arduino, C],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#list([A collaboration work of assemble of a quadcopter from scratch],[Programming, design of control system and testing of the quadcopter],[This project won the best Final Year Project of the Department of Electrical Engineering of Thunhai University],[#strong[Keynotes]: Control system, Unmanned aerial vehicle, Arduino, C],)
   ],
 )
 
