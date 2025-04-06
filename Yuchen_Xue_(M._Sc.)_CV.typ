@@ -315,15 +315,13 @@
 ]
 
 #two-col(
-  left-column-width: design-header-photo-width * 1.3,
-  right-column-width: 1fr,
+  alignments: (center, left),
   left-content: [
     #align(
-      left + horizon,
+      center + horizon,
       pad(x: 4pt, image("profile_picture.jpg", width: design-header-photo-width)),
     )
   ],
-  column-gutter: 0cm,
   right-content: [
 = Yuchen Xue \(M. Sc.\)
 
