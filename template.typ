@@ -3,8 +3,10 @@
 
 #import "@preview/fontawesome:0.5.0": fa-icon
 
-#let date = datetime.today()
-#let locale-catalog-last-update-style = [_Last updated on #date.display("[day] [month repr:short]. [year]")_]
+// ==== ==== ==== ==== ==== ====
+// Customable options
+// ==== ==== ==== ==== ==== ====
+
 #let design-page-size = "a4"
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
@@ -13,13 +15,12 @@
 #let design-colors-connections = rgb(0, 79, 144)
 #let design-colors-links = rgb(0, 79, 144)
 #let design-section-titles-font-family = "Fontin"
-#let design-section-titles-weight = "bold"
+#let design-section-titles-weight = "regular"
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
 #let design-section-titles-vertical-space-above = 0.55cm
 #let design-section-titles-vertical-space-below = 0.3cm - 0.5em
 #let design-section-titles-small-caps = false
-#let design-links-use-external-link-icon = true
 #let design-text-font-size = 10pt
 #let design-text-leading = 0.6em
 #let design-text-font-family = "Fontin"
@@ -27,10 +28,9 @@
 #let design-text-allow-hyphenate = auto
 #let design-text-date-and-location-column-alignment = right
 #let design-header-photo-width = 108pt
-#let design-header-use-icons-for-connections = true
 #let design-header-name-font-family = "Fontin"
 #let design-header-name-font-size = 25pt
-#let design-header-name-bold = false
+#let design-header-name-weight = "regular"
 #let design-header-connections-font-family = "Fontin"
 #let design-header-vertical-space-before-name = 1.5em
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
@@ -53,9 +53,15 @@
 #let design-page-right-margin = 2cm
 #let design-page-show-last-updated-date = true
 #let design-page-show-page-numbering = true
+#let design-links-use-external-link-icon = true
 #let design-links-underline = true
+#let design-last-update-location = top + right
 
-// Entry utilities:
+// ==== ==== ==== ==== ==== ====
+// Public methods and properties
+// ==== ==== ==== ==== ==== ====
+
+// Basic building block for document content
 #let two-col(
   left-column-width: design-entries-date-and-location-width,
   right-column-width: 1fr,
@@ -72,12 +78,12 @@
       ([#set par(spacing: design-text-leading); #left-content]),
       ([#set par(spacing: design-text-leading); #right-content]),
     ),
-    breakable: true,
-    width: 100%,
   )
 ]
 
+// ==== ==== ==== ==== ==== ====
 // Main template configuration
+// ==== ==== ==== ==== ==== ====
 #let conf(
   person_name :"",
   person_designation :"",
@@ -91,8 +97,11 @@
   doc,
 ) = {
 
-  // Metadata:
-  set document(author: person_name, title: person_name + "'s CV", date: date)
+  // Document metadata:
+  set document(
+    title: person_name + "'s CV", 
+    author: person_name, 
+  )
 
   // Page settings:
   set page(
@@ -105,7 +114,7 @@
     paper: design-page-size,
     footer: 
       if design-page-show-page-numbering {
-
+        // Use a page counter as the document's footer
         let locale-catalog-page-numbering-style = context{
           str(person_name) + " - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + ""
         }
@@ -120,6 +129,7 @@
       },
     footer-descent: 0% - 0.3em + design-page-bottom-margin / 2,
   )
+
   // Text settings:
   set text(
     font: design-text-font-family,
@@ -134,7 +144,7 @@
     justify: design-text-allow-justify,
   )
 
-  // Bullet list settings for entries:
+  // Bullet list settings:
   set list(
     marker: design-highlights-bullet,
     spacing: design-highlights-vertical-space-between-highlights,
@@ -142,19 +152,12 @@
     body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
   )
 
-  // Main heading settings:
-  let header-font-weight
-  if design-header-name-bold {
-    header-font-weight = 700
-  } else {
-    header-font-weight = 400
-  }
+  // CV heading settings:
   show heading.where(level: 1): it => [
-    #set par(spacing: 0pt)
     #set align(design-header-alignment)
     #set text(
       font: design-header-name-font-family,
-      weight: header-font-weight,
+      weight: design-header-name-weight,
       size: design-header-name-font-size,
       fill: design-colors-name,
     )
@@ -165,6 +168,7 @@
     #v(design-header-vertical-space-between-name-and-connections)
   ]
 
+  // Section title settings:
   show heading.where(level: 2): it => [
     #set align(left)
     #set text(size: (1em / 1.2)) // reset
@@ -174,17 +178,13 @@
       weight: design-section-titles-weight,
       fill: design-colors-section-titles,
     )
-    #let section-title = (
-      if design-section-titles-small-caps [
-        #smallcaps(it.body)
-      ] else [
-        #it.body
-      ]
-    )
 
     // Vertical space above the section title
     #v(design-section-titles-vertical-space-above, weak: true)
 
+    // Configuration of each section -- 
+    // Left: a thin box for visual separation
+    // Right: the text of this section 
     #block(
       breakable: false,
       width: 100%,
@@ -194,11 +194,21 @@
           left-column-width: design-entries-date-and-location-width,
           right-column-width: 1fr,
           left-content: [
-            #align(horizon, box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles))
+            #align(
+              horizon, 
+              box(
+                width: 1fr, 
+                height: design-section-titles-line-thickness, 
+                fill: design-colors-section-titles
+              )
+            )
           ],
-          right-content: [
-            #section-title
-          ]
+          right-content: 
+            if design-section-titles-small-caps {
+              smallcaps(it.body)
+            } else {
+              it.body
+            }
         )
       ],
     )
@@ -209,18 +219,21 @@
   // Last updated date text:
   if design-page-show-last-updated-date {
     place(
-      top + right,
+      design-last-update-location,
       dx: 0cm,
       dy: -design-page-top-margin / 2,
       text(
-        locale-catalog-last-update-style,
+        [
+          _Last updated on #datetime.today().display("[day] [month repr:short]. [year]")_
+        ],
         fill: design-colors-last-updated-date-and-page-numbering,
         size: 0.9em,
       ),
     )
   }
 
-  let connections(connections-list) = context {
+  // Function for printing email, personal website and social network links
+  let print-connections(connections-list) = context {
     set text(fill: design-colors-connections, font: design-header-connections-font-family)
     set par(leading: design-text-leading*1.7, justify: false)
     let list-of-connections = ()
@@ -257,31 +270,73 @@
     align(list-of-connections.join(linebreak()), design-header-alignment)
     v(design-header-vertical-space-between-connections-and-first-section - design-section-titles-vertical-space-above)
   }
-  
+
+  // ---- ---- ---- ---- ---- ---- ----
+  // Header
+  // ---- ---- ---- ---- ---- ---- ----
   two-col(
     alignments: (center, left),
+
+    // Display personal photo
     left-content: image(
       photo, 
       width: design-header-photo-width
     ),
+
+    // Display CV title and connections list
     right-content: [
+
       = #person_name (#person_designation)
 
-      // Print connections:
-      #let connections-list = (
-        [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)#residence],
-        box(link("mailto:" + email)[#fa-icon("envelope", size: 0.9em) #h(0.05cm)#email]),
-        box(link("tel:" + phone)[#fa-icon("phone", size: 0.9em) #h(0.05cm) #phone.replace("-", " ")]),
-        box(link(website)[#fa-icon("link", size: 0.9em) #h(0.05cm)#website.replace("https://", "")]),
-        ..for social_network in social_network_list {
-          (box(link(social_network.dest)[#fa-icon(social_network.fa_icon, size: 0.9em) #h(0.05cm)#social_network.display_text]),)
-        }
+      #print-connections(
+        (
+          [
+            #fa-icon("location-dot", size: 0.9em)
+            #h(0.05cm)
+            #residence
+          ],
+          box(
+            link("mailto:" + email)[
+              #fa-icon("envelope", size: 0.9em)
+              #h(0.05cm)
+              #email
+            ]
+          ),
+          box(
+            link("tel:" + phone)[
+              #fa-icon("phone", size: 0.9em)
+              #h(0.05cm)
+              #phone.replace("-", " ")
+            ]
+          ),
+          box(
+            link(website)[
+              #fa-icon("link", size: 0.9em)
+              #h(0.05cm)
+              #website.replace("https://", "")
+            ]
+          ),
+          ..for social_network in social_network_list {
+            (
+              box(
+                link(social_network.dest)[
+                  #fa-icon(social_network.fa_icon, size: 0.9em)  
+                  #h(0.05cm)
+                  #social_network.display_text
+                ]
+              ),
+            )
+          }
+        )
       )
-      #connections(connections-list)
     ],
   )
 
-  // Show rules for links that affect the rest of the document:
+  // ---- ---- ---- ---- ---- ---- ----
+  // Document body settings
+  // ---- ---- ---- ---- ---- ---- ----
+
+  // Show rules for links that affect the rest of the document
   show link: it => {
 
     set text(fill: design-colors-links)
@@ -305,7 +360,8 @@
     }
   }
 
-  // Document body
+  // ---- ---- ---- ---- ---- ---- ----
+  // Begin of the document body
+  // ---- ---- ---- ---- ---- ---- ----
   doc
 }
-
