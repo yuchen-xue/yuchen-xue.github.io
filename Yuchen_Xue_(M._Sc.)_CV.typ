@@ -1,9 +1,10 @@
 
 #import "@preview/fontawesome:0.5.0": fa-icon
 
-#let name = "Yuchen Xue (M. Sc.)"
+#let person-name = "Yuchen Xue"
+#let person-designation = "M. Sc."
 #let date = datetime.today()
-#let locale-catalog-page-numbering-style = context { "Yuchen Xue (M. Sc.) - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
+#let locale-catalog-page-numbering-style = context { str(person-name) + " - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
 #let locale-catalog-last-update-style = [_Last updated on #date.display("[day] [month repr:short]. [year]")_]
 #let locale-catalog-language = "en"
 #let design-page-size = "a4"
@@ -59,7 +60,7 @@
 #let design-links-underline = true
 
 // Metadata:
-#set document(author: name, title: name + "'s CV", date: date)
+#set document(author: person-name, title: person-name + "'s CV", date: date)
 
 // Page settings:
 #set page(
@@ -265,7 +266,7 @@
     width: design-header-photo-width
   ),
   right-content: [
-= Yuchen Xue \(M. Sc.\)
+= #person-name (#person-designation)
 
 // Print connections:
 #let connections-list = (
@@ -728,7 +729,7 @@
 
 #two-col(
   right-content: [
-    Sheng-Luen Chung, #strong[#emph[Yuchen Xue]], Shih-Chao Chien, Ruei-Shan Chan
+    Sheng-Luen Chung, #strong[#emph[#person-name]], Shih-Chao Chien, Ruei-Shan Chan
   ]
 )
 
@@ -750,7 +751,7 @@
 
 #two-col(
   right-content: [
-    Kun-Lin Tsai, Fang-Yie Leu, Yi-Fung Huang, Chi Yang, Cheng-Hsin Chang, King-Shing Yip, #strong[#emph[Yuchen Xue]], Guan-Chi Lai
+    Kun-Lin Tsai, Fang-Yie Leu, Yi-Fung Huang, Chi Yang, Cheng-Hsin Chang, King-Shing Yip, #strong[#emph[#person-name]], Guan-Chi Lai
   ]
 )
 
