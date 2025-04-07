@@ -15,7 +15,7 @@
 #let design-colors-connections = rgb(0, 79, 144)
 #let design-colors-links = rgb(0, 79, 144)
 #let design-section-titles-font-family = "Fontin"
-#let design-section-titles-bold = false
+#let design-section-titles-weight = "bold"
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
 #let design-section-titles-vertical-space-above = 0.55cm
@@ -32,7 +32,7 @@
 #let design-header-use-icons-for-connections = true
 #let design-header-name-font-family = "Fontin"
 #let design-header-name-font-size = 25pt
-#let design-header-name-bold = false
+#let design-header-name-font-weight = "regular"
 #let design-header-connections-font-family = "Fontin"
 #let design-header-vertical-space-before-name = 1.5em
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
@@ -127,18 +127,12 @@
 ]
 
 // Main heading settings:
-#let header-font-weight
-#if design-header-name-bold {
-  header-font-weight = 700
-} else {
-  header-font-weight = 400
-}
 #show heading.where(level: 1): it => [
   #set par(spacing: 0pt)
   #set align(design-header-alignment)
   #set text(
     font: design-header-name-font-family,
-    weight: header-font-weight,
+    weight: design-header-name-font-weight,
     size: design-header-name-font-size,
     fill: design-colors-name,
   )
@@ -149,20 +143,13 @@
   #v(design-header-vertical-space-between-name-and-connections)
 ]
 
-#let section-title-font-weight
-#if design-section-titles-bold {
-  section-title-font-weight = 700
-} else {
-  section-title-font-weight = 400
-}
-
 #show heading.where(level: 2): it => [
   #set align(left)
   #set text(size: (1em / 1.2)) // reset
   #set text(
     font: design-section-titles-font-family,
-    size: (design-section-titles-font-size),
-    weight: section-title-font-weight,
+    size: design-section-titles-font-size,
+    weight: design-section-titles-weight,
     fill: design-colors-section-titles,
   )
   #let section-title = (
