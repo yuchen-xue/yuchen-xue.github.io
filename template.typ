@@ -86,6 +86,7 @@
   email: "",
   phone: "",
   website: "",
+  social_network_list: (),
   text_lang: "en",
   doc,
 ) = {
@@ -268,16 +269,14 @@
 
       // Print connections:
       #let connections-list = (
-        [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Rostock, Germany],
-        [#box(link("mailto:yuchen.xue1994@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)yuchen.xue1994\@gmail.com])],
-        [#box(link("tel:+49-1522-6656395")[#fa-icon("phone", size: 0.9em) #h(0.05cm)+49 1522 6656395])],
-        [#box(link("https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6")[#fa-icon("link", size: 0.9em) #h(0.05cm)yuchen-xue.notion.site\/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6])],
-        [#box(link("https://linkedin.com/in/sean-yuchen-xue")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)sean-yuchen-xue])],
-        [#box(link("https://github.com/yuchen-xue")[#fa-icon("github", size: 0.9em) #h(0.05cm)yuchen-xue])],
-        [#box(link("https://researchgate.net/profile/Yuchen-Xue-6")[#fa-icon("researchgate", size: 0.9em) #h(0.05cm)Yuchen-Xue-6])],
-        [#box(link("https://www.xing.com/profile/Yuchen_Xue2")[#fa-icon("xing", size: 0.9em) #h(0.05cm)Yuchen_Xue2])],
+        [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)#residence],
+        box(link("mailto:" + email)[#fa-icon("envelope", size: 0.9em) #h(0.05cm)#email]),
+        box(link("tel:" + phone)[#fa-icon("phone", size: 0.9em) #h(0.05cm) #phone.replace("-", " ")]),
+        box(link(website)[#fa-icon("link", size: 0.9em) #h(0.05cm)#website.replace("https://", "")]),
+        ..for social_network in social_network_list {
+          (box(link(social_network.dest)[#fa-icon(social_network.fa_icon, size: 0.9em) #h(0.05cm)#social_network.display_text]),)
+        }
       )
-
       #connections(connections-list)
     ],
   )
