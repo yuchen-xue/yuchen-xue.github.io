@@ -24,7 +24,8 @@
 #let design-text-font-size = 10pt
 #let design-text-leading = 0.6em
 #let design-text-font-family = "Fontin"
-#let design-text-alignment = "justified"
+#let design-text-allow-justify = true
+#let design-text-allow-hyphenate = auto
 #let design-text-date-and-location-column-alignment = right
 #let design-header-photo-width = 108pt
 #let design-header-use-icons-for-connections = true
@@ -81,31 +82,17 @@
   footer-descent: 0% - 0.3em + design-page-bottom-margin / 2,
 )
 // Text settings:
-#let justify
-#let hyphenate
-#if design-text-alignment == "justified" {
-  justify = true
-  hyphenate = true
-} else if design-text-alignment == "left" {
-  justify = false
-  hyphenate = false
-} else if design-text-alignment == "justified-with-no-hyphenation" {
-  justify = true
-  hyphenate = false
-}
 #set text(
   font: design-text-font-family,
   size: design-text-font-size,
   lang: locale-catalog-language,
-  hyphenate: hyphenate,
+  hyphenate: design-text-allow-hyphenate,
   fill: design-colors-text,
-  // Disable ligatures for better ATS compatibility:
-  ligatures: true,
 )
 #set par(
   spacing: 0pt,
   leading: design-text-leading,
-  justify: justify,
+  justify: design-text-allow-justify,
 )
 
 // Bullet list settings for entries:
