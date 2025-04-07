@@ -184,17 +184,6 @@
   #v(design-section-titles-vertical-space-below)
 ]
 
-// Customable links used for content of entries:
-#let link-entry-content(url, body) = {
-  body = [#if design-links-underline [#underline(body)] else [#body]]
-  body = [#if design-links-use-external-link-icon [#body#h(design-text-font-size/4)#box(
-        fa-icon("external-link", size: 0.7em),
-        baseline: -10%,
-      )] else [#body]]
-  body = [#set text(fill: design-colors-links);#body]
-  link(url, body)
-}
-
 // Last updated date text:
 #if design-page-show-last-updated-date {
   place(
@@ -271,6 +260,30 @@
 
   ],
 )
+
+// Show rules for links in entry contents:
+#show link: it => {
+
+  set text(fill: design-colors-links)
+
+  if design-links-underline {
+    underline[#it]
+  } else {
+    it
+  }
+
+  if design-links-use-external-link-icon {
+    // Append an icon to the end of the text
+    h(design-text-font-size/4)
+    box(
+      fa-icon(
+        "external-link", 
+        size: 0.7em
+      ),
+      baseline: -10%,
+    )
+  }
+}
 
 
 == Experience
@@ -567,7 +580,7 @@
   right-content: list(
     [Development of a GAM model with high capability of generalization;],
     [The model has a MAPE \(mean absolute percentage error\) value of 14.89;],
-    [A report is available online \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],
+    [A report is available online \(#link("https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html")[link to this report]\)],
     [#strong[Keynotes]: R language, Regression model, Generalized Additive Model \(GAM\)],
   )
 )
@@ -596,7 +609,7 @@
 
 #two-col(
   right-content: list(
-    [Developed of a website using Quarto \(#link-entry-content("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],
+    [Developed of a website using Quarto \(#link("https://yuchen-xue.github.io/Learn-R-Quarto/")[Link to this website]\)],
     [Automated deployment using Github Action],
     [#strong[Keynotes]: Quarto, R language, Github Actions],
   )
@@ -631,7 +644,7 @@
     [Implementation of the Spring Boot backend;],
     [Deployment of an object detection model using TensorFlow for Java;],
     [Implementation of MySQL database and Spring Database Connector for storing detection result.],
-    [Available on Github \(#link-entry-content("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]\)],
+    [Available on Github \(#link("https://github.com/yuchen-xue/Spring-MySQL-TF-Detection")[link to this repository]\)],
     [#strong[Keynotes]: Spring framework, SQL database, Model deployment, Gradle, RESTful API],
   )
 )
@@ -721,7 +734,12 @@
   ]
 )
 
-#v(design-highlights-top-margin - design-text-leading)#link-entry-content("https://doi.org/10.1109/AVSS.2019.8909867")[10.1109/AVSS.2019.8909867] (16th IEEE International Conference on Advanced Video and Signal Based Surveillance \(AVSS\))  ],
+#v(design-highlights-top-margin)
+
+#two-col(
+  right-content: [
+    #link-entry-content("https://doi.org/10.1109/AVSS.2019.8909867")[10.1109/AVSS.2019.8909867] (16th IEEE International Conference on Advanced Video and Signal Based Surveillance \(AVSS\))
+  ]
 )
 
 #v(design-entries-vertical-space-between-entries)
@@ -747,7 +765,7 @@
 
 #two-col(
   right-content: [
-    #link-entry-content("https://doi.org/10.1109/IMIS.2016.73")[10.1109/IMIS.2016.73] (10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing \(IMIS\))
+    #link("https://doi.org/10.1109/IMIS.2016.73")[10.1109/IMIS.2016.73] (10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing \(IMIS\))
   ]
 )
 
