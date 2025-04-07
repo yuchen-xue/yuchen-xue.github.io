@@ -5,6 +5,29 @@
 
 #let person-name = "Yuchen Xue"
 
+#let social-network-list = (
+  (
+    dest: "https://linkedin.com/in/sean-yuchen-xue",
+    display_text: "sean-yuchen-xue",
+    fa_icon: "linkedin"
+  ),
+  (
+    dest: "https://github.com/yuchen-xue",
+    display_text: "yuchen-xue",
+    fa_icon: "github"
+  ),
+  (
+    dest: "https://www.xing.com/profile/Yuchen_Xue2",
+    display_text: "Yuchen_Xue2",
+    fa_icon: "xing"
+  ),
+  (
+    dest: "https://researchgate.net/profile/Yuchen-Xue-6",
+    display_text: "Yuchen-Xue-6",
+    fa_icon: "researchgate"
+  ),
+)
+
 #show: conf.with(
   person_name: person-name,
   person_designation: "M. Sc.",
@@ -13,6 +36,7 @@
   email: "yuchen.xue@example.com",
   phone: "+49-1234-5678", 
   website: "https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6",
+  social_network_list: social-network-list
 )
 
 
