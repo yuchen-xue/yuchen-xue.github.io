@@ -3,6 +3,7 @@
 
 #let person-name = "Yuchen Xue"
 #let person-designation = "M. Sc."
+#let person-photo = "profile_picture.jpg"
 #let date = datetime.today()
 #let locale-catalog-page-numbering-style = context { str(person-name) + " - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
 #let locale-catalog-last-update-style = [_Last updated on #date.display("[day] [month repr:short]. [year]")_]
@@ -249,7 +250,7 @@
 #two-col(
   alignments: (center, left),
   left-content: image(
-    "profile_picture.jpg", 
+    person-photo, 
     width: design-header-photo-width
   ),
   right-content: [
