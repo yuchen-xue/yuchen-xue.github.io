@@ -81,6 +81,19 @@
   )
 }
 
+// Only display month and year
+// `day: 1` is just a workaround of ignoring input of "day"
+#let display-date(
+  date_string: "",
+) = {
+  let date_split = date_string.split("-")
+  datetime(
+    year: int(date_split.at(0)),
+    month: int(date_split.at(1)),
+    day: 1, 
+  ).display("[month repr:short]. [year]")
+}
+
 // ---- ---- ---- ---- ---- ----
 // Public methods and properties
 // ---- ---- ---- ---- ---- ----
@@ -99,9 +112,9 @@
     alignments: (right, auto),
     left-content: 
       if end_date == "" {
-        start_date
+        display-date(date_string: start_date)
       } else {
-        [#start_date - #end_date]
+        [#display-date(date_string: start_date) - #display-date(date_string: end_date)]
       },
     right-content: title,
   )

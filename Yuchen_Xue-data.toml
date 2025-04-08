@@ -50,7 +50,7 @@ url = "https://www.uni-rostock.de"
 area = "Computational Electrical Engineering"
 degree = "M.Sc."
 start_date = "2021-10"
-end_date = "present"
+end_date = ""
 location = "Rostock (Germany)"
 highlights = ["Keynotes: Computational methods, Image processing"]
 
