@@ -49,6 +49,7 @@
       ..exp.highlights
     )
   )
+  v(design-entries-vertical-space-between-entries)
 }
 
 == Education
@@ -68,8 +69,9 @@
         ..edu.highlights
       )
     )
-    v(design-highlights-top-margin);
   }
+
+  v(design-entries-vertical-space-between-entries)
 }
 
 == Keynote Technical Skills
@@ -80,6 +82,7 @@
       / #skill.label: #skill.details
     ]
   )
+
   v(design-entries-vertical-space-between-entries)
 }
 
@@ -91,13 +94,13 @@
       / #skill.label: #skill.details
     ]
   )
+
   v(design-entries-vertical-space-between-entries)
 }
 
 == Technical Projects -- Deep Learning & Computer Vision
 
 #for proj in cv_data.sections.at("technical_projects -- deep_learning_&_computer_vision") {
-
 
   insert-section-title(
     title: [*#proj.name* - *#proj.location*], 
@@ -120,7 +123,6 @@
     v(design-highlights-top-margin)
   }
 
-
   if proj.keys().contains("link") {
     insert-section-body(
       content: [
@@ -129,7 +131,6 @@
     )
     v(design-highlights-top-margin)
   }
-
 
   if proj.keys().contains("keywords") {
     insert-section-body(
@@ -148,7 +149,6 @@
 
 #for proj in cv_data.sections.at("technical_projects -- data_engineering") {
 
-
   insert-section-title(
     title: [*#proj.name* - #proj.location], 
     start_date: proj.start_date, 
@@ -171,7 +171,6 @@
     v(design-highlights-top-margin)
   }
 
-
   if proj.keys().contains("link") {
     insert-section-body(
       content: [
@@ -180,7 +179,6 @@
     )
     v(design-highlights-top-margin)
   }
-
 
   if proj.keys().contains("keywords") {
     insert-section-body(
@@ -199,7 +197,6 @@
 
 #for proj in cv_data.sections.at("technical_projects -- software_development_&_embedded_systems") {
 
-
   insert-section-title(
     title: [*#proj.name* - #proj.location], 
     start_date: proj.start_date, 
@@ -222,7 +219,6 @@
     v(design-highlights-top-margin)
   }
 
-
   if proj.keys().contains("link") {
     insert-section-body(
       content: [
@@ -231,7 +227,6 @@
     )
     v(design-highlights-top-margin)
   }
-
 
   if proj.keys().contains("keywords") {
     insert-section-body(
@@ -286,6 +281,7 @@
       / #n.label: #n.details
     ]
   )
+
   v(design-entries-vertical-space-between-entries)
 }
 
@@ -304,6 +300,7 @@
   v(design-highlights-top-margin)
   
   insert-section-body(content: n.summary)
+
   v(design-entries-vertical-space-between-entries)
 }
 
@@ -321,5 +318,6 @@
   v(design-highlights-top-margin)
   
   insert-section-body(content: activity.summary)
+
   v(design-entries-vertical-space-between-entries)
 }
