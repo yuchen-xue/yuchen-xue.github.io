@@ -110,15 +110,15 @@ label = "Programming Frameworks and Tools"
 details = "Good understanding with Docker Compose, Spring Boot, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog"
 
 [[cv.sections.language_skills]]
-label = "English: Fluent (C1)"
+label = "English - Fluent (C1)"
 details = "IETLS band 7 (CERF C1-Level). Date of the certification was issued: 26.03.2019"
 
 [[cv.sections.language_skills]]
-label = "German: Fluent (C1)"
+label = "German - Fluent (C1)"
 details = "CERF C1 Level. Issued by Sprachzentrum der Universtität Rostock on 19.02.2025."
 
 [[cv.sections.language_skills]]
-label = "Chinese: Native speaker (C2)"
+label = "Chinese - Native speaker (C2)"
 details = "Native Mandarin speaker"
 
 [[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
@@ -256,16 +256,18 @@ doi = "10.1109/IMIS.2016.73"
 date = "2016-12-22"
 
 [[cv.sections.miscellaneous]]
-bullet = "Hobbies: Snowboarding, Hiking & trekking, Cycling, Badminton"
+label = "Hobbies"
+details = "Snowboarding, Hiking & trekking, Cycling, Badminton"
 
 [[cv.sections.miscellaneous]]
-bullet = "German driving license ***(Class B)***"
+label = "Driving license"
+details = "German driving license Class B"
 
 [[cv.sections.certificate_and_award]]
 name = "Certificate: Qualification Program -- Statistics Software R (advanced)"
 date = "2024-09"
 location = "Rostock (Germany)"
-summary = "A 4-day workshop that features multiple theoretical topics and practical sessions related to multiple statistics topics: ***linear model, anova, mean comparison with post-hoc tests, experimental designs and professional illustration***"
+summary = "A 4-day workshop that features multiple theoretical topics and practical sessions related to multiple statistics topics, including linear model, anova, mean comparison with post-hoc tests, experimental designs and professional illustration"
 
 [[cv.sections.certificate_and_award]]
 name = "The best annual final year project of the Department of Electrical Engineering"

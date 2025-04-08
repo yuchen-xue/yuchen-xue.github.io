@@ -190,12 +190,16 @@
     justify: design-text-allow-justify,
   )
 
-  // Bullet list settings:
+  // Text list settings:
   set list(
     marker: design-highlights-bullet,
     spacing: design-highlights-vertical-space-between-highlights,
     indent: design-highlights-left-margin,
     body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+  )
+  set terms(
+    hanging-indent: 0cm, 
+    separator: [: ], 
   )
 
   // CV heading settings:

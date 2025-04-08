@@ -77,7 +77,7 @@
 #for skill in cv_data.sections.keynote_technical_skills {
   insert-section-body(
     content: [
-      *#skill.label:* #skill.details
+      / #skill.label: #skill.details
     ]
   )
   v(design-entries-vertical-space-between-entries)
@@ -88,7 +88,7 @@
 #for skill in cv_data.sections.language_skills {
   insert-section-body(
     content: [
-      *#skill.label:* #skill.details
+      / #skill.label: #skill.details
     ]
   )
   v(design-entries-vertical-space-between-entries)
@@ -217,7 +217,7 @@
 #for n in cv_data.sections.miscellaneous {
   insert-section-body(
     content: [
-      - #n.bullet
+      / #n.label: #n.details
     ]
   )
   v(design-entries-vertical-space-between-entries)
