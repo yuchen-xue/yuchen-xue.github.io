@@ -119,6 +119,18 @@
     )
   }
 
+  v(design-highlights-top-margin)
+
+  if proj.keys().contains("keywords") {
+    insert-section-body(
+      content: [
+        / Keywords: #for word in proj.keywords {
+          [#emph(word), ]
+        }
+      ]
+    )
+  }
+
   v(design-entries-vertical-space-between-entries)
 }
 
@@ -148,6 +160,18 @@
     )
   }
 
+  v(design-highlights-top-margin)
+
+  if proj.keys().contains("keywords") {
+    insert-section-body(
+      content: [
+        / Keywords: #for word in proj.keywords {
+          [#emph(word), ]
+        }
+      ]
+    )
+  }
+
   v(design-entries-vertical-space-between-entries)
 }
 
@@ -174,6 +198,18 @@
       content: list(
         ..proj.highlights
       )
+    )
+  }
+
+  v(design-highlights-top-margin)
+
+  if proj.keys().contains("keywords") {
+    insert-section-body(
+      content: [
+        / Keywords: #for word in proj.keywords {
+          [#emph(word), ]
+        }
+      ]
     )
   }
 
