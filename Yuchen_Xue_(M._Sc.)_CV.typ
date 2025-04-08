@@ -106,7 +106,7 @@
 
 == Technical Projects -- Deep Learning & Computer Vision
 
-#for proj in cv_data.sections.at("technical_projects -- deep_learning_&_computer_vision") {
+#for proj in cv_data.sections.technical_projects.at("deep_learning_&_computer_vision") {
 
   insert-section-title(
     title: [*#proj.name* - *#proj.location*], 
@@ -153,7 +153,7 @@
 
 == Technical Projects -- Data Engineering
 
-#for proj in cv_data.sections.at("technical_projects -- data_engineering") {
+#for proj in cv_data.sections.technical_projects.at("data_engineering") {
 
   insert-section-title(
     title: [*#proj.name* - #proj.location], 
@@ -201,7 +201,7 @@
 
 == Technical Projects -- Software Development & Embedded Systems
 
-#for proj in cv_data.sections.at("technical_projects -- software_development_&_embedded_systems") {
+#for proj in cv_data.sections.technical_projects.at("software_development_&_embedded_systems") {
 
   insert-section-title(
     title: [*#proj.name* - #proj.location], 
