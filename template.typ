@@ -23,7 +23,7 @@
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
 #let design-section-titles-vertical-space-above = 0.1cm
-#let design-section-titles-vertical-space-below = 0.3cm - 0.5em
+#let design-section-titles-vertical-space-below = 0.1cm
 #let design-section-titles-small-caps = false
 #let design-text-font-size = 10pt
 #let design-text-leading = 0.6em
@@ -42,11 +42,12 @@
 #let design-header-horizontal-space-between-connections = 0.5cm
 #let design-header-separator-between-connections = ""
 #let design-header-alignment = left
-#let design-highlights-summary-left-margin = 0cm
 #let design-highlights-bullet = "•"
 #let design-highlights-left-margin = 0cm
 #let design-highlights-vertical-space-between-highlights = 0.19cm
 #let design-highlights-horizontal-space-between-bullet-and-highlights = 0.3em
+#let design-terms-left-margin = 0cm
+#let design-terms-separator = [: ]
 #let design-entries-date-and-location-width = 4.15cm
 #let design-entries-allow-page-break-in-entries = true
 #let design-entries-horizontal-space-between-columns = 0.4cm
@@ -99,7 +100,7 @@
 // Public methods and properties
 // ---- ---- ---- ---- ---- ----
 
-// Insert date information on the left column `title` on the right column,
+// Insert date information on the left column and `title` on the right column,
 // followed by `entry_content` at the bottom.
 // Required arguments: `title`, `start_date` and `entry_content`;
 // Optional argument: `end_date`
@@ -113,7 +114,7 @@
   end_date: "",
   entry_content: []
 ) = two-col(
-    alignments: (right, auto),
+    alignments: (design-text-date-and-location-column-alignment, auto),
     left-content: 
       if end_date == "" {
         display-date(date_string: start_date)
@@ -210,8 +211,8 @@
     body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
   )
   set terms(
-    hanging-indent: 0cm, 
-    separator: [: ], 
+    hanging-indent: design-terms-left-margin, 
+    separator: design-terms-separator, 
   )
 
   // CV heading settings:
@@ -233,7 +234,6 @@
   // Section title settings:
   show heading.where(level: 2): it => [
     #set align(left)
-    #set text(size: (1em / 1.2)) // reset
     #set text(
       font: design-section-titles-font-family,
       size: design-section-titles-font-size,
