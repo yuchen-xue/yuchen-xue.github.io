@@ -36,7 +36,7 @@ position = "Technical assistant for a deep-learning-based defect detection solut
 location = "Magdeburg (Germany)"
 start_date = "2023-05"
 end_date = "2024-04"
-summary = "I developed a deep-learning-based zero-shot solution for industry-level defect detection on different types of machinery parts. This solution features the comparison of image samples based on image segmentation technologies. Highlights:"
+summary = "I developed a deep-learning-based zero-shot solution for industry-level defect detection on different types of machinery parts. This solution features the comparison of image samples based on image segmentation technologies."
 highlights = [
     "Solution for precise image segmentation of irregular machinery parts using computer vision algorithms;",
     "97.6% precision on recognition tasks that was tested by a pre-defined dataset;",
@@ -52,7 +52,7 @@ degree = "M.Sc."
 start_date = "2021-10"
 end_date = ""
 location = "Rostock (Germany)"
-highlights = ["Keynotes: Computational methods, Image processing"]
+highlights = ["Computational methods, Image processing"]
 
 [[cv.sections.education]]
 institution = "Rhein-Waal University of Applied Science"
@@ -62,7 +62,7 @@ degree = "M.Sc."
 start_date = "2021-03"
 end_date = "2021-08"
 location = "Kleve (Germany)"
-highlights = ["Keynotes: Data engineering, Simulation technologies"]
+highlights = ["Data engineering, Simulation technologies"]
 
 [[cv.sections.education]]
 institution = "University of Groningen"
@@ -72,7 +72,7 @@ degree = "Exchange program"
 start_date = "2020-02"
 end_date = "2020-08"
 location = "Groningen (the Netherlands)"
-highlights = ["Keynotes: Parallel Computing, Scalable Computing"]
+highlights = ["Parallel Computing, Scalable Computing"]
 
 [[cv.sections.education]]
 institution = "National Taiwan University of Science and Technology"
@@ -84,7 +84,7 @@ end_date = "2021-01"
 location = "Taipei (Taiwan)"
 highlights = [
     "Top technical university in Taiwan",
-    "Keynotes: Deep Learning, Image processing, Data engineering",
+    "Deep Learning, Image processing, Data engineering",
 ]
 
 [[cv.sections.education]]
@@ -95,7 +95,7 @@ degree = "B.Sc."
 start_date = "2013-09"
 end_date = "2017-06"
 location = "Taipei (Taiwan)"
-highlights = ["Keynotes: Verilog HDL, Semiconductor, Microelectronics"]
+highlights = ["Verilog HDL, Semiconductor, Microelectronics"]
 
 [[cv.sections.keynote_technical_skills]]
 label = "Programming Languages"
@@ -126,13 +126,13 @@ name = "Master thesis: Survey on facial recognition models using deep learning t
 start_date = "2019-10"
 end_date = "2021-01"
 location = "Taipei (Taiwan)"
-summary = "This is an academic survey of different deep-learning based face recognition models, aiming at bringing insights to future researches in the field of deep learning. Highlights:"
+summary = "This is an academic survey of different deep-learning based face recognition models, aiming at bringing insights to future researches in the field of deep learning."
 highlights = [
     "Literal survey of numerous face recognition solutions",
     "Summary of the fundamental differences of deep learning models",
     "Use of experimental method for comparing the performance of different models",
-    "Keynotes: Face recognition, deep learning, PyTorch, Tensorflow",
 ]
+keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
 
 [[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
 name = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
@@ -145,15 +145,15 @@ highlights = [
     "Contributed to the relative academic paper as the 2nd co-author. The paper accepted by the 16th IEEE International Conference on Advanced Video and Signal-based Surveillance (AVSS)",
     "Delivered an academic speech on this conference",
     "Use of experimental method for comparing the performance of different models",
-    "Keynotes: Cross-camera recognition, Python, deep learning, TensorFlow",
 ]
+keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
 
 [[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
 name = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
 start_date = "2018-02"
 end_date = "2018-04"
 location = "Taipei (Taiwan)"
-summary = "A real-time object detection solution for real-time video streams written in C++. Highlights:"
+summary = "A real-time object detection solution for real-time video streams written in C++."
 highlights = [
     "Improvement of 20% in precision compared to the base model",
     "Improvement on small, obscured, and overlapping objects",
@@ -166,12 +166,16 @@ name = "Energy consumption analysis on a real-life dataset using R language"
 start_date = "2018-04"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
-summary = "This is a project about analyzing and predicting real-world energy consumption data using Generalized Additive Model (GAM). Highlights:"
+summary = "This is a project about analyzing and predicting real-world energy consumption data using Generalized Additive Model (GAM)."
 highlights = [
     "Development of a GAM model with high capability of generalization;",
     "The model has a MAPE (mean absolute percentage error) value of 14.89;",
     "A report is available online ([link to this report](https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html))",
-    "Keynotes: R language, Regression model, Generalized Additive Model (GAM)",
+]
+keywords = [
+    "R language",
+    "Regression model",
+    "Generalized Additive Model (GAM)",
 ]
 
 [[cv.sections."technical_projects -- data_engineering"]]
@@ -179,25 +183,31 @@ name = "Online R Tutorial Website based on Quarto"
 start_date = "2024-09"
 end_date = "2024-10"
 location = "Rostock (Germany)"
-summary = "This is a website that contains my study note and projects of R language. Highlights:"
+summary = "This is a website that contains my study note and projects of R language."
 highlights = [
     "Developed of a website using Quarto ([Link to this website](https://yuchen-xue.github.io/Learn-R-Quarto/))",
     "Automated deployment using Github Action",
-    "Keynotes: Quarto, R language, Github Actions",
 ]
+keywords = ["Quarto", "R language", "Github Actions"]
 
 [[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
 name = "Java Spring Boot application for image object detection"
 start_date = "2018-01"
 end_date = "2018-03"
 location = "Taipei (Taiwan)"
-summary = "A Restful API for object detection based on Spring Framework and MySql server. Highlights:"
+summary = "A Restful API for object detection based on Spring Framework and MySql server."
 highlights = [
     "Implementation of the Spring Boot backend;",
     "Deployment of an object detection model using TensorFlow for Java;",
     "Implementation of MySQL database and Spring Database Connector for storing detection result.",
     "Available on Github [link to this repository](https://github.com/yuchen-xue/Spring-MySQL-TF-Detection)",
-    "Keynotes: Spring framework, SQL database, Model deployment, Gradle, RESTful API",
+]
+keywords = [
+    "Spring framework",
+    "SQL database",
+    "Model deployment",
+    "Gradle",
+    "RESTful API",
 ]
 
 [[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
@@ -205,27 +215,27 @@ name = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-
 start_date = "2018-03"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
-summary = "A hardware and software integration using Raspberry Pi. Highlights:"
+summary = "A hardware and software integration using Raspberry Pi."
 highlights = [
     "The design of the whole software and hardware structure;",
     "The implementation of a voice recognition technique through cloud platform;",
     "The implementation of a QR code reading technique;",
     "The implementation of smile detection based on OpenCV.",
-    "Keynotes: Raspberry Pi, OpenCV, Cloud platform",
 ]
+keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
 
 [[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
 name = "Simple Quadcopter based on Arduino"
 start_date = "2016-02"
 end_date = "2016-06"
 location = "Taichung (Taiwan)"
-summary = "A simple quadcopter based on Arduino. Highlights:"
+summary = "A simple quadcopter based on Arduino."
 highlights = [
     "A collaboration work of assemble of a quadcopter from scratch",
     "Programming, design of control system and testing of the quadcopter",
     "This project won the best Final Year Project of the Department of Electrical Engineering of Thunhai University",
-    "Keynotes: Control system, Unmanned aerial vehicle, Arduino, C",
 ]
+keywords = ["Control system", "Unmanned aerial vehicle", "Arduino", "C"]
 
 [[cv.sections.publications]]
 title = "Improved Part-aligned Deep Features Learning for Person Re-Identification"
