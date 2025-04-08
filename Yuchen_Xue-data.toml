@@ -170,13 +170,13 @@ summary = "This is a project about analyzing and predicting real-world energy co
 highlights = [
     "Development of a GAM model with high capability of generalization;",
     "The model has a MAPE (mean absolute percentage error) value of 14.89;",
-    "A report is available online ([link to this report](https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html))",
 ]
 keywords = [
     "R language",
     "Regression model",
     "Generalized Additive Model (GAM)",
 ]
+link = "https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
 
 [[cv.sections."technical_projects -- data_engineering"]]
 name = "Online R Tutorial Website based on Quarto"
@@ -185,10 +185,11 @@ end_date = "2024-10"
 location = "Rostock (Germany)"
 summary = "This is a website that contains my study note and projects of R language."
 highlights = [
-    "Developed of a website using Quarto ([Link to this website](https://yuchen-xue.github.io/Learn-R-Quarto/))",
+    "Developed of a website using Quarto",
     "Automated deployment using Github Action",
 ]
 keywords = ["Quarto", "R language", "Github Actions"]
+link = "https://yuchen-xue.github.io/Learn-R-Quarto"
 
 [[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
 name = "Java Spring Boot application for image object detection"
@@ -200,7 +201,6 @@ highlights = [
     "Implementation of the Spring Boot backend;",
     "Deployment of an object detection model using TensorFlow for Java;",
     "Implementation of MySQL database and Spring Database Connector for storing detection result.",
-    "Available on Github [link to this repository](https://github.com/yuchen-xue/Spring-MySQL-TF-Detection)",
 ]
 keywords = [
     "Spring framework",
@@ -209,6 +209,7 @@ keywords = [
     "Gradle",
     "RESTful API",
 ]
+link = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
 
 [[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
 name = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
