@@ -22,7 +22,7 @@
 #let design-section-titles-weight = "regular"
 #let design-section-titles-line-thickness = 0.15cm
 #let design-section-titles-font-size = 1.4em
-#let design-section-titles-vertical-space-above = 0.55cm
+#let design-section-titles-vertical-space-above = 0.1cm
 #let design-section-titles-vertical-space-below = 0.3cm - 0.5em
 #let design-section-titles-small-caps = false
 #let design-text-font-size = 10pt
