@@ -58,7 +58,13 @@
   insert-section-title(
     title: [*#edu.institution* - #emph(edu.degree), #edu.area - #edu.location], 
     start_date: edu.start_date, 
-    end_date: edu.end_date,
+    end_date: 
+      // When `end_date` is not defined, it stands for an ongoing activity
+      if edu.keys().contains("end_date") {
+        edu.end_date
+      } else {
+        none
+      },
   )
 
   v(design-highlights-top-margin);

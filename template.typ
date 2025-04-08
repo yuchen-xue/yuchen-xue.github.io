@@ -98,11 +98,13 @@
 // Public methods and properties
 // ---- ---- ---- ---- ---- ----
 
-// Insert date on the left column and title on the right column
+// Insert date on the left column and title on the right column.
 // Required arguments: `title` and `start_date`
 // Optional argument: `end_date`
-// By default both `start_date` and `end_date` are displayed
-// If `end_date` is empty, only `start_date` is displayed
+// By default `end_date` is an empty string, thus only a single date is displayed;
+// if only `start_date` is given but `end_date` is of none type,
+// this function will treat the input date as an ongoing activity;
+// if both `start_date` and `end_date` are defined, both of them are displayed
 #let insert-section-title(
   title: [],
   start_date: "",
@@ -113,6 +115,8 @@
     left-content: 
       if end_date == "" {
         display-date(date_string: start_date)
+      } else if end_date == none {
+        [#display-date(date_string: start_date) - ]
       } else {
         [#display-date(date_string: start_date) - #display-date(date_string: end_date)]
       },
