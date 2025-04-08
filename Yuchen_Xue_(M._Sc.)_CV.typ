@@ -1,4 +1,4 @@
-#import "template.typ": conf, two-col
+#import "template.typ": conf, insert-section-title, insert-section-body
 
 #let design-highlights-top-margin = 0.25cm
 #let design-entries-vertical-space-between-entries = 0.4cm
@@ -32,26 +32,20 @@
 
 #for exp in cv_data.sections.experience {
 
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #exp.start_date - #exp.end_date
-    ],
-    right-content: [
-      *#exp.position*, #emph(exp.company) - #exp.location
-    ],
+  insert-section-title(
+    title: [*#exp.position*, #emph(exp.company) - #exp.location], 
+    start_date: exp.start_date, 
+    end_date: exp.end_date,
   )
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: exp.summary
-  )
+  insert-section-body(content: exp.summary)
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: list(
+  insert-section-body(
+    content: list(
       ..exp.highlights
     )
   )
@@ -60,21 +54,17 @@
 == Education
 
 #for edu in cv_data.sections.education {
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #edu.start_date - #edu.end_date
-    ],
-    right-content: [
-      *#edu.institution* - #emph(edu.degree), #edu.area - #edu.location
-    ]
+  insert-section-title(
+    title: [*#edu.institution* - #emph(edu.degree), #edu.area - #edu.location], 
+    start_date: edu.start_date, 
+    end_date: edu.end_date,
   )
 
   v(design-highlights-top-margin);
 
   if edu.keys().contains("highlights") {
-    two-col(
-      right-content: list(
+    insert-section-body(
+      content: list(
         ..edu.highlights
       )
     )
@@ -85,8 +75,8 @@
 == Keynote Technical Skills
 
 #for skill in cv_data.sections.keynote_technical_skills {
-  two-col(
-    right-content: [
+  insert-section-body(
+    content: [
       *#skill.label:* #skill.details
     ]
   )
@@ -96,8 +86,8 @@
 == Language Skills
 
 #for skill in cv_data.sections.language_skills {
-  two-col(
-    right-content: [
+  insert-section-body(
+    content: [
       *#skill.label:* #skill.details
     ]
   )
@@ -109,27 +99,21 @@
 #for proj in cv_data.sections.at("technical_projects -- deep_learning_&_computer_vision") {
 
 
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #proj.start_date - #proj.end_date
-    ],
-    right-content: [
-      *#proj.name* - *#proj.location*
-    ],
+  insert-section-title(
+    title: [*#proj.name* - *#proj.location*], 
+    start_date: proj.start_date, 
+    end_date: proj.end_date,
   )
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: proj.summary
+  insert-section-body(content: proj.summary
   )
 
   v(design-highlights-top-margin)
 
   if proj.keys().contains("highlights") {
-    two-col(
-      right-content: list(
+    insert-section-body(content: list(
         ..proj.highlights
       )
     )
@@ -143,27 +127,22 @@
 #for proj in cv_data.sections.at("technical_projects -- data_engineering") {
 
 
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #proj.start_date - #proj.end_date
-    ],
-    right-content: [
-      *#proj.name* - #proj.location
-    ],
+  insert-section-title(
+    title: [*#proj.name* - #proj.location], 
+    start_date: proj.start_date, 
+    end_date: proj.end_date,
   )
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: proj.summary
+  insert-section-body(content: proj.summary
   )
 
   v(design-highlights-top-margin)
 
   if proj.keys().contains("highlights") {
-    two-col(
-      right-content: list(
+    insert-section-body(
+      content: list(
         ..proj.highlights
       )
     )
@@ -177,27 +156,22 @@
 #for proj in cv_data.sections.at("technical_projects -- software_development_&_embedded_systems") {
 
 
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #proj.start_date - #proj.end_date
-    ],
-    right-content: [
-      *#proj.name* - #proj.location
-    ],
+  insert-section-title(
+    title: [*#proj.name* - #proj.location], 
+    start_date: proj.start_date, 
+    end_date: proj.end_date,
   )
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: proj.summary
+  insert-section-body(content: proj.summary
   )
 
   v(design-highlights-top-margin)
 
   if proj.keys().contains("highlights") {
-    two-col(
-      right-content: list(
+    insert-section-body(
+      content: list(
         ..proj.highlights
       )
     )
@@ -210,16 +184,14 @@
 
 #for pub in cv_data.sections.publications {
 
-  two-col(
-    alignments: (right, auto),
-    left-content: pub.date,
-    right-content: strong(pub.title),
+  insert-section-title(
+    title: strong(pub.title),
+    start_date: pub.date, 
   )
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: 
+  insert-section-body(content: 
       for author in pub.authors {
         if author == cv_data.name {
           [#emph(author), ]
@@ -231,8 +203,8 @@
 
   v(design-highlights-top-margin)
 
-  two-col(
-    right-content: [
+  insert-section-body(
+    content: [
       #link("https://doi.org/"+pub.doi)[#pub.doi] (#pub.journal)
     ]
   )
@@ -243,8 +215,8 @@
 == Miscellaneous
 
 #for n in cv_data.sections.miscellaneous {
-  two-col(
-    right-content: [
+  insert-section-body(
+    content: [
       - #n.bullet
     ]
   )
@@ -255,43 +227,33 @@
 == Certificate and Award
 
 #for n in cv_data.sections.certificate_and_award {
-  two-col(
-    alignments: (right, auto),
-    left-content: n.date,
-    right-content: [
+
+  insert-section-title(
+    title: [
       *#n.name* - #n.location
-    ],
+    ], 
+    start_date: n.date,
   )
   
   v(design-highlights-top-margin)
   
-  two-col(
-    right-content: [
-      #n.summary
-    ]
-  )
+  insert-section-body(content: n.summary)
   v(design-entries-vertical-space-between-entries)
 }
 
 == Extracurricular Activities
 
 #for activity in cv_data.sections.extracurricular_activities {
-  two-col(
-    alignments: (right, auto),
-    left-content: [
-      #activity.start_date - #activity.end_date
-    ],
-    right-content: [
+  insert-section-title(
+    title: [
       *#activity.name* - #activity.location
-    ],
+    ], 
+    start_date: activity.start_date, 
+    end_date: activity.end_date,
   )
   
   v(design-highlights-top-margin)
   
-  two-col(
-    right-content: [
-      #activity.summary
-    ]
-  )
+  insert-section-body(content: activity.summary)
   v(design-entries-vertical-space-between-entries)
 }

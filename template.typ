@@ -4,8 +4,12 @@
 #import "@preview/fontawesome:0.5.0": fa-icon
 
 // ==== ==== ==== ==== ==== ====
-// Customable options
+// Methods and properties
 // ==== ==== ==== ==== ==== ====
+
+// ---- ---- ---- ---- ---- ----
+// Private methods and properties
+// ---- ---- ---- ---- ---- ----
 
 #let design-page-size = "a4"
 #let design-colors-text = rgb(0, 0, 0)
@@ -57,10 +61,6 @@
 #let design-links-underline = true
 #let design-last-update-location = top + right
 
-// ==== ==== ==== ==== ==== ====
-// Public methods and properties
-// ==== ==== ==== ==== ==== ====
-
 // Basic building block for document content
 #let two-col(
   left-column-width: design-entries-date-and-location-width,
@@ -69,8 +69,8 @@
   right-content: "",
   alignments: (auto, auto),
   column-gutter: design-entries-horizontal-space-between-columns,
-) = [
-  #block(
+) = {
+  block(
     grid(
       columns: (left-column-width, right-column-width),
       column-gutter: column-gutter,
@@ -79,7 +79,40 @@
       ([#set par(spacing: design-text-leading); #right-content]),
     ),
   )
-]
+}
+
+// ---- ---- ---- ---- ---- ----
+// Public methods and properties
+// ---- ---- ---- ---- ---- ----
+
+// Insert date on the left column and title on the right column
+// Required arguments: `title` and `start_date`
+// Optional argument: `end_date`
+// By default both `start_date` and `end_date` are displayed
+// If `end_date` is empty, only `start_date` is displayed
+#let insert-section-title(
+  title: [],
+  start_date: "",
+  end_date: "",
+) = {
+  two-col(
+    alignments: (right, auto),
+    left-content: 
+      if end_date == "" {
+        start_date
+      } else {
+        [#start_date - #end_date]
+      },
+    right-content: title,
+  )
+}
+
+// Insert the text on the right column
+#let insert-section-body(
+  content: "",
+) = two-col(
+  right-content: content
+)
 
 // ==== ==== ==== ==== ==== ====
 // Main template configuration
