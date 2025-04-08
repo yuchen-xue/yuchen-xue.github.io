@@ -120,7 +120,7 @@ details = "CERF C1 Level. Issued by Sprachzentrum der Universtität Rostock on 1
 label = "Chinese - Native speaker (C2)"
 details = "Native Mandarin speaker"
 
-[[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
+[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
 name = "Master thesis: Survey on facial recognition models using deep learning technologies"
 start_date = "2019-10"
 end_date = "2021-01"
@@ -133,7 +133,7 @@ highlights = [
 ]
 keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
 
-[[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
+[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
 name = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
 start_date = "2018-07"
 end_date = "2019-09"
@@ -147,7 +147,7 @@ highlights = [
 ]
 keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
 
-[[cv.sections."technical_projects -- deep_learning_&_computer_vision"]]
+[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
 name = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
 start_date = "2018-02"
 end_date = "2018-04"
@@ -160,7 +160,7 @@ highlights = [
     "Training of a reliable model with limited data using transfer learning technique",
 ]
 
-[[cv.sections."technical_projects -- data_engineering"]]
+[[cv.sections.technical_projects."data_engineering"]]
 name = "Energy consumption analysis on a real-life dataset using R language"
 start_date = "2018-04"
 end_date = "2018-06"
@@ -177,7 +177,7 @@ keywords = [
 ]
 link = "https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
 
-[[cv.sections."technical_projects -- data_engineering"]]
+[[cv.sections.technical_projects."data_engineering"]]
 name = "Online R Tutorial Website based on Quarto"
 start_date = "2024-09"
 end_date = "2024-10"
@@ -190,7 +190,7 @@ highlights = [
 keywords = ["Quarto", "R language", "Github Actions"]
 link = "https://yuchen-xue.github.io/Learn-R-Quarto"
 
-[[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
+[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
 name = "Java Spring Boot application for image object detection"
 start_date = "2018-01"
 end_date = "2018-03"
@@ -210,7 +210,7 @@ keywords = [
 ]
 link = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
 
-[[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
+[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
 name = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
 start_date = "2018-03"
 end_date = "2018-06"
@@ -224,7 +224,7 @@ highlights = [
 ]
 keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
 
-[[cv.sections."technical_projects -- software_development_&_embedded_systems"]]
+[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
 name = "Simple Quadcopter based on Arduino"
 start_date = "2016-02"
 end_date = "2016-06"
