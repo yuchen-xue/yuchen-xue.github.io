@@ -319,7 +319,7 @@
           ..for social_network in social_network_list {
             (
               box(
-                link(social_network.dest)[
+                link(social_network.link)[
                   #fa-icon(social_network.fa_icon, size: 0.9em)  
                   #h(0.05cm)
                   #social_network.display_text
