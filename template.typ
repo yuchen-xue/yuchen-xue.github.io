@@ -51,6 +51,7 @@
 #let design-entries-allow-page-break-in-entries = true
 #let design-entries-horizontal-space-between-columns = 0.4cm
 #let design-entries-left-and-right-margin = 0cm
+#let design-entries-vertical-space-between-entries = 0.4cm
 #let design-page-top-margin = 2cm
 #let design-page-bottom-margin = 2cm
 #let design-page-left-margin = 2cm
@@ -98,19 +99,20 @@
 // Public methods and properties
 // ---- ---- ---- ---- ---- ----
 
-// Insert date on the left column and title on the right column.
-// Required arguments: `title` and `start_date`
+// Insert date information on the left column `title` on the right column,
+// followed by `entry_content` at the bottom.
+// Required arguments: `title`, `start_date` and `entry_content`;
 // Optional argument: `end_date`
 // By default `end_date` is an empty string, thus only a single date is displayed;
 // if only `start_date` is given but `end_date` is of none type,
 // this function will treat the input date as an ongoing activity;
 // if both `start_date` and `end_date` are defined, both of them are displayed
-#let insert-section-title(
+#let entry(
   title: [],
   start_date: "",
   end_date: "",
-) = {
-  two-col(
+  entry_content: []
+) = two-col(
     alignments: (right, auto),
     left-content: 
       if end_date == "" {
@@ -120,15 +122,21 @@
       } else {
         [#display-date(date_string: start_date) - #display-date(date_string: end_date)]
       },
-    right-content: title,
-  )
-}
+    right-content: [
+      #title \
+      #entry_content
+      #v(design-entries-vertical-space-between-entries)
+    ]
+)
 
-// Insert the text on the right column
-#let insert-section-body(
-  content: "",
+// Similar to `entry`, but without date information and title
+#let inline-entry(
+  entry_content: [],
 ) = two-col(
-  right-content: content
+  right-content: [
+    #entry_content
+    #v(design-entries-vertical-space-between-entries)
+  ]
 )
 
 // ==== ==== ==== ==== ==== ====
