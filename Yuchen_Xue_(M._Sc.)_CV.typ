@@ -12,8 +12,8 @@
 
 #show: conf.with(
   person_name: cv_data.name,
-  person_designation: cv_data.designation,
-  photo: cv_data.photo,
+  person_label: cv_data.label,
+  profile_picture: cv_data.profile_picture,
   residence: cv_data.residence,
   email: cv_data.email,
   phone: cv_data.phone, 

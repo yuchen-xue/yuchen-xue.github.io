@@ -1,7 +1,7 @@
 [cv]
 name = "Yuchen Xue"
-designation = "M. Sc."
-photo = "profile_picture.jpg"
+label = "M. Sc. Electrical Engineering"
+profile_picture = "profile_picture.jpg"
 introduction = "I have a strong background in deep learning, computer vision, and data engineering. I am passionate about applying my skills to solve real-world problems and contribute to innovative projects."
 residence = "Rostock, Germany"
 email = "sean962081468@gmail.com"
