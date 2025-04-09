@@ -35,9 +35,11 @@
 #let design-header-name-font-family = "Fontin"
 #let design-header-name-font-size = 25pt
 #let design-header-name-weight = "regular"
+#let design-header-label-font-size = 12pt
+#let design-header-label-style = "italic"
 #let design-header-connections-font-family = "Fontin"
-#let design-header-vertical-space-before-name = 1.5em
-#let design-header-vertical-space-between-name-and-connections = 0.7cm
+#let design-header-vertical-space-before-title = 0.9cm
+#let design-header-vertical-space-between-title-and-connections = 0.3cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
 #let design-header-horizontal-space-between-connections = 0.5cm
 #let design-header-separator-between-connections = ""
@@ -145,8 +147,8 @@
 // ==== ==== ==== ==== ==== ====
 #let conf(
   person_name :"",
-  person_designation :"",
-  photo: "",
+  person_label :"",
+  profile_picture: "",
   residence: "",
   email: "",
   phone: "",
@@ -215,7 +217,7 @@
     separator: design-terms-separator, 
   )
 
-  // CV heading settings:
+  // CV title settings:
   show heading.where(level: 1): it => [
     #set align(design-header-alignment)
     #set text(
@@ -224,12 +226,29 @@
       size: design-header-name-font-size,
       fill: design-colors-name,
     )
-    // Vertical space before the name
-    #v(design-header-vertical-space-before-name)
     #it.body
-    // Vertical space after the name
-    #v(design-header-vertical-space-between-name-and-connections)
   ]
+
+  // Display person's name and label as the document's title
+  let display-title(
+    name: "",
+    label: "",
+  ) = {
+
+    // Vertical space before the CV title
+    v(design-header-vertical-space-before-title)
+
+    [= #name]
+    text(
+      font: design-header-name-font-family,
+      style: design-header-label-style,
+      size: design-header-label-font-size,
+      fill: design-colors-name,
+    )[#label]
+
+    // Vertical space after the CV title
+    v(design-header-vertical-space-between-title-and-connections)
+  }
 
   // Section title settings:
   show heading.where(level: 2): it => [
@@ -339,16 +358,19 @@
   two-col(
     alignments: (center, left),
 
-    // Display personal photo
+    // Display profile picture
     left-content: image(
-      photo, 
+      profile_picture, 
       width: design-header-photo-width
     ),
 
     // Display CV title and connections list
     right-content: [
-
-      = #person_name (#person_designation)
+    
+      #display-title(
+        name: person_name,
+        label: person_label,
+      )
 
       #print-connections(
         (
