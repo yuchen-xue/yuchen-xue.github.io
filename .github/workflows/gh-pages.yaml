@@ -24,10 +24,10 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install jinja2
 
-      - name: Setup output dir and copy css files
+      - name: Setup output dir and copy assets
         run: |
           mkdir _site
-          cp -r css ./_site
+          cp -r css profile-picture-portfolio.jpg ./_site
 
       - name: Generate Static Files
         run: |

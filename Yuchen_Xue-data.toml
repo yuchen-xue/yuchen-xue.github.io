@@ -1,9 +1,12 @@
 [header]
 name = "Yuchen Xue"
 label = "M. Sc. Electrical Engineering"
-profile_picture = "profile_picture.jpg"
 introduction = "I have a strong background in deep learning, computer vision, and data engineering. I am passionate about applying my skills to solve real-world problems and contribute to innovative projects."
 website = "https://yuchen-xue.com"
+
+[header.picture]
+profile_picture_cv = "profile-picture-CV.jpg"
+profile_picture_portfolio = "profile-picture-portfolio.jpg"
 
 [header.contact]
 residence = "Rostock, Germany"

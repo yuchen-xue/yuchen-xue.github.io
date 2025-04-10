@@ -34,11 +34,11 @@
     <header class="page-header">
       <div class="container">
         <div class="header-top flex-responsive">
-          {% if header.profile_picture %}
+          {% if header.picture.profile_picture_portfolio %}
             <img class="header-image"
                  width="256"
                  height="256"
-                 src="{{ header.profile_picture }}"
+                 src="{{ header.picture.profile_picture_portfolio }}"
                  alt="{{ header.name }} Profile Image" />
           {% endif %}
           <div class="header-info">
