@@ -5,12 +5,14 @@ introduction = "I have a strong background in deep learning, computer vision, an
 website = "https://yuchen-xue.com"
 
 [header.picture]
+# Insert your own profile picture for the CV
 profile_picture_cv = "profile-picture-CV.jpg"
 profile_picture_portfolio = "profile-picture-portfolio.jpg"
 
 [header.contact]
 residence = "Rostock, Germany"
 email = "sean962081468@gmail.com"
+# Use your own phone number
 phone = "+49-1234-5678"
 
 [[header.social_networks]]
