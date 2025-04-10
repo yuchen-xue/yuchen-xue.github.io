@@ -1,2 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# UV stuff:
+.venv
+
+# Ruff stuff:
+.ruff_cache/
+
+# MacOS stuff:
+.DS_Store
+
+# VS Code stuff:
+.vscode/
+
 # Workspace files:
 *.pdf
