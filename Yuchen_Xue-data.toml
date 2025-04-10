@@ -1,35 +1,37 @@
-[cv]
+[header]
 name = "Yuchen Xue"
 label = "M. Sc. Electrical Engineering"
 profile_picture = "profile_picture.jpg"
 introduction = "I have a strong background in deep learning, computer vision, and data engineering. I am passionate about applying my skills to solve real-world problems and contribute to innovative projects."
+website = "https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6"
+
+[header.contact]
 residence = "Rostock, Germany"
 email = "sean962081468@gmail.com"
 phone = "+49-1234-5678"
-website = "https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6"
 
-[[cv.social_networks]]
-link = "https://linkedin.com/in/sean-yuchen-xue"
+[[header.social_networks]]
+url = "https://linkedin.com/in/sean-yuchen-xue"
 display_text = "sean-yuchen-xue"
 fa_icon = "linkedin"
 
-[[cv.social_networks]]
-link = "https://github.com/yuchen-xue"
+[[header.social_networks]]
+url = "https://github.com/yuchen-xue"
 display_text = "yuchen-xue"
 fa_icon = "github"
 
-[[cv.social_networks]]
-link = "https://www.xing.com/profile/Yuchen_Xue2"
+[[header.social_networks]]
+url = "https://www.xing.com/profile/Yuchen_Xue2"
 display_text = "Yuchen_Xue2"
 fa_icon = "xing"
 
-[[cv.social_networks]]
-link = "https://researchgate.net/profile/Yuchen-Xue-6"
+[[header.social_networks]]
+url = "https://researchgate.net/profile/Yuchen-Xue-6"
 display_text = "Yuchen-Xue-6"
 fa_icon = "researchgate"
 
-[cv.sections]
-[[cv.sections.experience]]
+[sections]
+[[sections.work_experience]]
 company = "Fraunhofer IFF"
 url = "https://www.iff.fraunhofer.de"
 position = "Technical assistant for a deep-learning-based defect detection solution"
@@ -44,7 +46,7 @@ highlights = [
     "Collaborated with my colleagues using a version control repository;",
 ]
 
-[[cv.sections.education]]
+[[sections.education]]
 institution = "University of Rostock"
 url = "https://www.uni-rostock.de"
 area = "Computational Electrical Engineering"
@@ -53,7 +55,7 @@ start_date = "2021-10"
 location = "Rostock (Germany)"
 highlights = ["Computational methods, Image processing"]
 
-[[cv.sections.education]]
+[[sections.education]]
 institution = "Rhein-Waal University of Applied Science"
 url = "https://www.hochschule-rhein-waal.de"
 area = "Information Engineering and Computer Science"
@@ -63,17 +65,17 @@ end_date = "2021-08"
 location = "Kleve (Germany)"
 highlights = ["Data engineering, Simulation technologies"]
 
-[[cv.sections.education]]
+[[sections.education]]
 institution = "University of Groningen"
 url = "https://www.rug.nl"
-area = "the Faculty of Science and Engineering"
+area = "Faculty of Science and Engineering"
 degree = "Exchange program"
 start_date = "2020-02"
 end_date = "2020-08"
 location = "Groningen (the Netherlands)"
 highlights = ["Parallel Computing, Scalable Computing"]
 
-[[cv.sections.education]]
+[[sections.education]]
 institution = "National Taiwan University of Science and Technology"
 url = "https://www.ntust.edu.tw"
 area = "Electrical Engineering"
@@ -86,7 +88,7 @@ highlights = [
     "Deep Learning, Image processing, Data engineering",
 ]
 
-[[cv.sections.education]]
+[[sections.education]]
 institution = "Thunhai University"
 url = "https://www.thu.edu.tw"
 area = "Electrical Engineering"
@@ -96,32 +98,32 @@ end_date = "2017-06"
 location = "Taipei (Taiwan)"
 highlights = ["Verilog HDL, Semiconductor, Microelectronics"]
 
-[[cv.sections.keynote_technical_skills]]
+[[sections.keynote_technical_skills]]
 label = "Programming Languages"
 details = "Proficient with Python; good understanding with Java, C++ and R"
 
-[[cv.sections.keynote_technical_skills]]
+[[sections.keynote_technical_skills]]
 label = "Machine Learning and Data Science Packages"
 details = "Good understanding with Pytorch, Tensorflow, OpenCV, Matplotlib, MySQL Server, Numpy, Pandas, Scikit Learn, Quarto"
 
-[[cv.sections.keynote_technical_skills]]
+[[sections.keynote_technical_skills]]
 label = "Programming Frameworks and Tools"
 details = "Good understanding with Docker Compose, Spring Boot, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog"
 
-[[cv.sections.language_skills]]
+[[sections.language_skills]]
 label = "English - Fluent (C1)"
 details = "IETLS band 7 (CERF C1-Level). Date of the certification was issued: 26.03.2019"
 
-[[cv.sections.language_skills]]
+[[sections.language_skills]]
 label = "German - Fluent (C1)"
 details = "CERF C1 Level. Issued by Sprachzentrum der Universtität Rostock on 19.02.2025."
 
-[[cv.sections.language_skills]]
+[[sections.language_skills]]
 label = "Chinese - Native speaker (C2)"
 details = "Native Mandarin speaker"
 
-[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
-name = "Master thesis: Survey on facial recognition models using deep learning technologies"
+[[sections.technical_projects."deep_learning_computer_vision"]]
+title = "Master thesis: Survey on facial recognition models using deep learning technologies"
 start_date = "2019-10"
 end_date = "2021-01"
 location = "Taipei (Taiwan)"
@@ -133,8 +135,8 @@ highlights = [
 ]
 keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
 
-[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
-name = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
+[[sections.technical_projects."deep_learning_computer_vision"]]
+title = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
 start_date = "2018-07"
 end_date = "2019-09"
 location = "Taipei (Taiwan)"
@@ -147,8 +149,8 @@ highlights = [
 ]
 keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
 
-[[cv.sections.technical_projects."deep_learning_&_computer_vision"]]
-name = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
+[[sections.technical_projects."deep_learning_computer_vision"]]
+title = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
 start_date = "2018-02"
 end_date = "2018-04"
 location = "Taipei (Taiwan)"
@@ -160,8 +162,8 @@ highlights = [
     "Training of a reliable model with limited data using transfer learning technique",
 ]
 
-[[cv.sections.technical_projects."data_engineering"]]
-name = "Energy consumption analysis on a real-life dataset using R language"
+[[sections.technical_projects."data_engineering"]]
+title = "Energy consumption analysis on a real-life dataset using R language"
 start_date = "2018-04"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
@@ -175,10 +177,10 @@ keywords = [
     "Regression model",
     "Generalized Additive Model (GAM)",
 ]
-link = "https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
+url = "https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
 
-[[cv.sections.technical_projects."data_engineering"]]
-name = "Online R Tutorial Website based on Quarto"
+[[sections.technical_projects."data_engineering"]]
+title = "Online R Tutorial Website based on Quarto"
 start_date = "2024-09"
 end_date = "2024-10"
 location = "Rostock (Germany)"
@@ -188,10 +190,10 @@ highlights = [
     "Automated deployment using Github Action",
 ]
 keywords = ["Quarto", "R language", "Github Actions"]
-link = "https://yuchen-xue.github.io/Learn-R-Quarto"
+url = "https://yuchen-xue.github.io/Learn-R-Quarto"
 
-[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
-name = "Java Spring Boot application for image object detection"
+[[sections.technical_projects."software_development_embedded_systems"]]
+title = "Java Spring Boot application for image object detection"
 start_date = "2018-01"
 end_date = "2018-03"
 location = "Taipei (Taiwan)"
@@ -208,10 +210,10 @@ keywords = [
     "Gradle",
     "RESTful API",
 ]
-link = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
+url = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
 
-[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
-name = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
+[[sections.technical_projects."software_development_embedded_systems"]]
+title = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
 start_date = "2018-03"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
@@ -224,8 +226,8 @@ highlights = [
 ]
 keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
 
-[[cv.sections.technical_projects."software_development_&_embedded_systems"]]
-name = "Simple Quadcopter based on Arduino"
+[[sections.technical_projects."software_development_embedded_systems"]]
+title = "Simple Quadcopter based on Arduino"
 start_date = "2016-02"
 end_date = "2016-06"
 location = "Taichung (Taiwan)"
@@ -237,7 +239,7 @@ highlights = [
 ]
 keywords = ["Control system", "Unmanned aerial vehicle", "Arduino", "C"]
 
-[[cv.sections.publications]]
+[[sections.publications]]
 title = "Improved Part-aligned Deep Features Learning for Person Re-Identification"
 authors = [
     "Sheng-Luen Chung",
@@ -249,7 +251,7 @@ journal = "16th IEEE International Conference on Advanced Video and Signal Based
 doi = "10.1109/AVSS.2019.8909867"
 date = "2019-11-25"
 
-[[cv.sections.publications]]
+[[sections.publications]]
 title = "Cloud Encryption Using Distributed Environmental Keys"
 authors = [
     "Kun-Lin Tsai",
@@ -265,41 +267,41 @@ journal = "10th International Conference on Innovative Mobile and Internet Servi
 doi = "10.1109/IMIS.2016.73"
 date = "2016-12-22"
 
-[[cv.sections.miscellaneous]]
+[[sections.miscellaneous]]
 label = "Hobbies"
 details = "Snowboarding, Hiking & trekking, Cycling, Badminton"
 
-[[cv.sections.miscellaneous]]
+[[sections.miscellaneous]]
 label = "Driving license"
 details = "German driving license Class B"
 
-[[cv.sections.certificate_and_award]]
-name = "Certificate: Qualification Program -- Statistics Software R (advanced)"
+[[sections.certificate_and_award]]
+title = "Certificate: Qualification Program -- Statistics Software R (advanced)"
 date = "2024-09"
 location = "Rostock (Germany)"
 summary = "A 4-day workshop that features multiple theoretical topics and practical sessions related to multiple statistics topics, including linear model, anova, mean comparison with post-hoc tests, experimental designs and professional illustration"
 
-[[cv.sections.certificate_and_award]]
-name = "The best annual final year project of the Department of Electrical Engineering"
+[[sections.certificate_and_award]]
+title = "The best annual final year project of the Department of Electrical Engineering"
 date = "2016-08"
 location = "Taichung (Taiwan)"
 summary = "“A Simple Quadcopter using Arduino” was granted as the best annual final year project of the Department of Electrical Engineering at Thunhai University"
 
-[[cv.sections.certificate_and_award]]
-name = "Calculus Competition at Thunghai University"
+[[sections.certificate_and_award]]
+title = "Calculus Competition at Thunghai University"
 date = "2014-09"
 location = "Taichung (Taiwan)"
 summary = "Won a prize in the Calculus Competition held by the Department of Applied Mathematics at Thunhai University"
 
-[[cv.sections.extracurricular_activities]]
-name = "Teaching assistant of the course “Logic Design Laboratory”"
+[[sections.volunteer_experiences]]
+title = "Teaching assistant of the course “Logic Design Laboratory”"
 summary = "I volunteered as a teaching assistant for the practical session of the course “Logic Design”. During this practical session, each student is required to learn the coding skills of the Verilog language (a hardware description language) and to complete tasks relating to the implementation of various logic units using FPGA development. My role was to introduce each assignment to the students and assist them when needed."
 location = "Taichung (Taiwan)"
 start_date = "2015-09"
 end_date = "2017-06"
 
-[[cv.sections.extracurricular_activities]]
-name = "Teaching assistant of the course \"Introduction to Cyber-Physical System\""
+[[sections.volunteer_experiences]]
+title = "Teaching assistant of the course \"Introduction to Cyber-Physical System\""
 summary = "I volunteered as a teaching assistant for this course “Regression Analysis”. During this practical session, where each student is required to learn the coding skill of the Python language and complete tasks using Raspberry Pi single board computer. My role was to introduce each assignment to the students and assist them when needed."
 location = "Taichung (Taiwan)"
 start_date = "2015-09"

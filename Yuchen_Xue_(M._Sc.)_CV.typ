@@ -4,30 +4,30 @@
 // Load cv data
 // ==== ==== ==== ==== ==== ====
 
-#let cv_data = toml("Yuchen_Xue-data.toml").cv
+#let cv_data = toml("Yuchen_Xue-data.toml")
 
 // ==== ==== ==== ==== ==== ====
 // Document header
 // ==== ==== ==== ==== ==== ====
 
 #show: conf.with(
-  person_name: cv_data.name,
-  person_label: cv_data.label,
-  profile_picture: cv_data.profile_picture,
-  residence: cv_data.residence,
-  email: cv_data.email,
-  phone: cv_data.phone, 
-  website: cv_data.website,
-  social_network_list: cv_data.social_networks
+  person_name: cv_data.header.name,
+  person_label: cv_data.header.label,
+  profile_picture: cv_data.header.profile_picture,
+  residence: cv_data.header.contact.residence,
+  email: cv_data.header.contact.email,
+  phone: cv_data.header.contact.phone, 
+  website: cv_data.header.website,
+  social_network_list: cv_data.header.social_networks
 )
 
 // ==== ==== ==== ==== ==== ====
 // Document body
 // ==== ==== ==== ==== ==== ====
 
-== Experience
+== Work Experience
 
-#for exp in cv_data.sections.experience {
+#for exp in cv_data.sections.work_experience {
   entry(
     title: [*#exp.position*, #emph(exp.company) - #exp.location], 
     start_date: exp.start_date, 
@@ -77,9 +77,9 @@
 
 == Technical Projects -- Deep Learning & Computer Vision
 
-#for proj in cv_data.sections.technical_projects.at("deep_learning_&_computer_vision") {
+#for proj in cv_data.sections.technical_projects.at("deep_learning_computer_vision") {
   entry(
-    title: [*#proj.name* - *#proj.location*], 
+    title: [*#proj.title* - *#proj.location*], 
     start_date: proj.start_date, 
     end_date: proj.end_date,
     entry_content: [
@@ -87,8 +87,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("link") {
-        [/ Link: #link(proj.link)[#proj.link.split("/").at(-1)]]
+      #if proj.keys().contains("url") {
+        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]
@@ -101,7 +101,7 @@
 
 #for proj in cv_data.sections.technical_projects.at("data_engineering") {
   entry(
-    title: [*#proj.name* - *#proj.location*], 
+    title: [*#proj.title* - *#proj.location*], 
     start_date: proj.start_date, 
     end_date: proj.end_date,
     entry_content: [
@@ -109,8 +109,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("link") {
-        [/ Link: #link(proj.link)[#proj.link.split("/").at(-1)]]
+      #if proj.keys().contains("url") {
+        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]
@@ -121,9 +121,9 @@
 
 == Technical Projects -- Software Development & Embedded Systems
 
-#for proj in cv_data.sections.technical_projects.at("software_development_&_embedded_systems") {
+#for proj in cv_data.sections.technical_projects.at("software_development_embedded_systems") {
   entry(
-    title: [*#proj.name* - *#proj.location*], 
+    title: [*#proj.title* - *#proj.location*], 
     start_date: proj.start_date, 
     end_date: proj.end_date,
     entry_content: [
@@ -131,8 +131,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("link") {
-        [/ Link: #link(proj.link)[#proj.link.split("/").at(-1)]]
+      #if proj.keys().contains("url") {
+        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]
@@ -150,7 +150,7 @@
     entry_content: 
       [
         #for author in pub.authors {
-          if author == cv_data.name {
+          if author == cv_data.header.name {
             [#emph(author), ]
           } else {
             [#author, ]
@@ -163,27 +163,27 @@
 
 == Miscellaneous
 
-#for n in cv_data.sections.miscellaneous {
+#for m in cv_data.sections.miscellaneous {
   inline-entry(
-    entry_content: [/ #n.label: #n.details]
+    entry_content: [/ #m.label: #m.details]
   )
 }
 
 == Certificate and Award
 
-#for n in cv_data.sections.certificate_and_award {
+#for ca in cv_data.sections.certificate_and_award {
   entry(
-    title: [*#n.name* - #n.location], 
-    start_date: n.date,
-    entry_content: n.summary
+    title: [*#ca.title* - #ca.location], 
+    start_date: ca.date,
+    entry_content: ca.summary
   )
 }
 
-== Extracurricular Activities
+== Volunteer Experiences
 
-#for activity in cv_data.sections.extracurricular_activities {
+#for activity in cv_data.sections.volunteer_experiences {
   entry(
-    title: [*#activity.name* - #activity.location], 
+    title: [*#activity.title* - #activity.location], 
     start_date: activity.start_date, 
     end_date: activity.end_date,
     entry_content: activity.summary
