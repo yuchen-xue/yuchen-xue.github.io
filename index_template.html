@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Info -->
+    <title>{{ header.name }} - Portfolio</title>
+    <meta name="description" content="{{ header.name }} - {{ header.summary }}">
+    <meta name="author" content="{{ header.name }}">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern_normalize.css" />
+    <link rel="stylesheet" href="css/html5bp.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Set a theme color that matches your website's primary color -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- Preconnect for Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <div class="header-top flex-responsive">
+          {% if header.profile_picture %}
+            <img class="header-image"
+                 width="256"
+                 height="256"
+                 src="{{ header.profile_picture }}"
+                 alt="{{ header.name }} Profile Image" />
+          {% endif %}
+          <div class="header-info">
+            <h1>{{ header.name }}</h1>
+            {% if header.label %}<h2 class="header-label">{{ header.label }}</h2>{% endif %}
+            {% if header.contact.email or header.contact.phone or header.contact.residence %}
+              <address>
+                <ul class="inline-list flex-responsive">
+                  {% if header.contact.email %}
+                    <li>
+                      <a href="mailto:{{ header.contact.email }}"><i class="fa-solid fa-envelope"></i> {{ header.contact.email }}</a>
+                    </li>
+                  {% endif %}
+                  {% if header.contact.residence %}<li>{{ header.contact.residence }}</li>{% endif %}
+                </ul>
+              </address>
+            {% endif %}
+            {% if header.social_networks %}
+              <ul class="inline-list flex-responsive">
+                {% for network in header.social_networks %}
+                  <li>
+                    <a href="{{ network.url }}"
+                       rel="noopener noreferrer"
+                       aria-label="{{ network.url }}"
+                       class="link-with-icon">
+                       <i class="fa-brands fa-{{ network.fa_icon }}"></i>
+                       {{ network.display_text }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if header.introduction %}<p class="header-introduction">{{ header.introduction }}</p>{% endif %}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <main>
+          {% if sections.work_experience %}
+            <section>
+              <h2 class="section-heading">Work Experience</h2>
+              {% for job in sections.work_experience %}
+                <section>
+                  <h3>
+                    {% if job.url %}
+                      {{ job.position }} at <a href="{{ job.url }}">{{ job.company }}</a>
+                    {% else %}
+                      {{ job.position }} at {{ job.company }}
+                    {% endif %}
+                  </h3>
+                  {% if job.start_date or job.end_date or job.location %}
+                    <p class="section-label">{{ job.start_date }} - {{ job.end_date }}, {{ job.location }}</p>
+                  {% endif %}
+                  {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+                  {% if job.highlights %}
+                    <ul>
+                      {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.technical_projects.deep_learning_computer_vision %}
+            <section>
+              <h2 class="section-heading">Technical Projects -- Deep Learning and Computer Vision</h2>
+              {% for project in sections.technical_projects.deep_learning_computer_vision %}
+                <section>
+                  <h3>
+                    {% if project.url %}
+                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% else %}
+                      {{ project.title }}
+                    {% endif %}
+                  </h3>
+                  {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.highlights %}
+                    <ul>
+                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if project.images %}
+                    <div class="gallery main-gallery">
+                      {% for img in project.images %}
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.technical_projects.data_engineering %}
+            <section>
+              <h2 class="section-heading">Technical Projects -- Data Engineering</h2>
+              {% for project in sections.technical_projects.data_engineering %}
+                <section>
+                  <h3>
+                    {% if project.url %}
+                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% else %}
+                      {{ project.title }}
+                    {% endif %}
+                  </h3>
+                  {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.highlights %}
+                    <ul>
+                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if project.images %}
+                    <div class="gallery main-gallery">
+                      {% for img in project.images %}
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.technical_projects.software_development_embedded_systems %}
+            <section>
+              <h2 class="section-heading">Technical Projects -- Software Development and Embedded Systems</h2>
+              {% for project in sections.technical_projects.software_development_embedded_systems %}
+                <section>
+                  <h3>
+                    {% if project.url %}
+                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% else %}
+                      {{ project.title }}
+                    {% endif %}
+                  </h3>
+                  {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.highlights %}
+                    <ul>
+                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if project.images %}
+                    <div class="gallery main-gallery">
+                      {% for img in project.images %}
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.publications %}
+            <section>
+              <h2 class="section-heading">Publications</h2>
+              {% for pub in sections.publications %}
+                <section>
+                  <h3>
+                    {% if pub.doi %}
+                      <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+                    {% else %}
+                      {{ pub.title }}
+                    {% endif %}
+                  </h3>
+                  {% if pub.date %}<p>{{ pub.date }}</p>{% endif %}
+                  {% if pub.journal %}<p>{{ pub.journal }}</p>{% endif %}
+                  {% if pub.authors %}
+                    <h4>Authors</h4>
+                    <ul>
+                      {% for author in pub.authors %}<li>{{ author }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if pub.images %}
+                    <div class="gallery main-gallery">
+                      {% for img in pub.images %}
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.certificate_and_award %}
+            <section>
+              <h2 class="section-heading">Certificate And Award</h2>
+              {% for ca in sections.certificate_and_award %}
+                <section>
+                  {% if ca.title %}<h3>{{ ca.title }}</h3>{% endif %}
+                  {% if ca.date or ca.location %}<p>{{ ca.date }} - {{ ca.location }} </p>{% endif %}
+                  {% if ca.summary %}<p>{{ ca.summary }}</p>{% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.volunteer_experiences %}
+            <section>
+              <h2 class="section-heading">Volunteer Experiences</h2>
+              {% for exp in sections.volunteer_experiences %}
+                <section>
+                  {% if exp.title %}<h3>{{ exp.title }}</h3>{% endif %}
+                  {% if exp.start_date or exp.end_date or exp.location %}
+                    <p class="section-label">{{ exp.start_date }} - {{ exp.end_date }}, {{ exp.location }}</p>
+                  {% endif %}
+                  {% if exp.summary %}<p>{{ exp.summary }}</p>{% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside>
+          {% if sections.education %}
+            <section>
+              <h2 class="section-heading">Education</h2>
+              {% for edu in sections.education %}
+                <section>
+                  <h3>
+                    {% if edu.url %}
+                      <a href="{{ edu.url }}">{{ edu.institution }}</a>
+                    {% else %}
+                      {{ edu.institution }}
+                    {% endif %}
+                  </h3>
+                  {% if edu.location or edu.start_date or edu.end_date%}
+                  <p class="section-label">{{ edu.start_date }} - {{edu.end_date}}</p>
+                  {% endif %}
+                  {% if edu.degree or edu.area %}
+                    <span class="block"><i>{{ edu.degree }} - {{ edu.area }}</i></span>
+                  {% endif %}
+                  {% if edu.highlights %}
+                    <h4>Highlights</h4>
+                    <ul>
+                      {% for hl in edu.highlights %}<li>{{ hl }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if sections.keynote_technical_skills %}
+            <section>
+              <h2 class="section-heading">Keynote Technical Skills</h2>
+              <ul class="unstyled-list">
+                {% for skill in sections.keynote_technical_skills %}
+                  <li>
+                    <h3>{{ skill.label }}</h3>
+                    <p class="section-label">{{ skill.details }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+
+          {% if sections.language_skills %}
+            <section>
+              <h2 class="section-heading">Languages</h2>
+              <ul class="unstyled-list">
+                {% for lang in sections.language_skills %}
+                  <li>
+                    <h3>{{ lang.label }}</h3>
+                    <p class="section-label">{{ lang.details }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+
+        </aside>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© {{ current_year }} {{ header.name }}. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
