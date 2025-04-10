@@ -13,7 +13,7 @@
 #show: conf.with(
   person_name: cv_data.header.name,
   person_label: cv_data.header.label,
-  profile_picture: cv_data.header.profile_picture,
+  profile_picture: cv_data.header.picture.profile_picture_cv,
   residence: cv_data.header.contact.residence,
   email: cv_data.header.contact.email,
   phone: cv_data.header.contact.phone, 
