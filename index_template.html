@@ -105,8 +105,8 @@
               {% for job in sections.work_experience %}
                 <section>
                   <h3>
-                    {% if job.url %}
-                      {{ job.position }} at <a href="{{ job.url }}">{{ job.company }}</a>
+                    {% if job.company_url %}
+                      {{ job.position }} at <a href="{{ job.company_url }}">{{ job.company }}</a>
                     {% else %}
                       {{ job.position }} at {{ job.company }}
                     {% endif %}
@@ -119,6 +119,20 @@
                     <ul>
                       {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
                     </ul>
+                  {% endif %}
+                  {% if job.project_url %}<p><a href="{{ job.project_url }}"> link to the project </a></p>{% endif %}
+                  {% if job.images %}
+                    <div class="gallery main-gallery">
+                      {% for img in job.images %}
+                        <figure>
+                          <img width="640"
+                               height="360"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
                   {% endif %}
                 </section>
               {% endfor %}
@@ -147,8 +161,8 @@
                     <div class="gallery main-gallery">
                       {% for img in project.images %}
                         <figure>
-                          <img width="600"
-                               height="338"
+                          <img width="640"
+                               height="360"
                                src="{{ img.img_path }}"
                                alt="{{ img.caption }}">
                           <figcaption>{{ img.caption }}</figcaption>
@@ -183,8 +197,8 @@
                     <div class="gallery main-gallery">
                       {% for img in project.images %}
                         <figure>
-                          <img width="600"
-                               height="338"
+                          <img width="640"
+                               height="360"
                                src="{{ img.img_path }}"
                                alt="{{ img.caption }}">
                           <figcaption>{{ img.caption }}</figcaption>
@@ -219,8 +233,8 @@
                     <div class="gallery main-gallery">
                       {% for img in project.images %}
                         <figure>
-                          <img width="600"
-                               height="338"
+                          <img width="640"
+                               height="360"
                                src="{{ img.img_path }}"
                                alt="{{ img.caption }}">
                           <figcaption>{{ img.caption }}</figcaption>
@@ -257,8 +271,8 @@
                     <div class="gallery main-gallery">
                       {% for img in pub.images %}
                         <figure>
-                          <img width="600"
-                               height="338"
+                          <img width="640"
+                               height="360"
                                src="{{ img.img_path }}"
                                alt="{{ img.caption }}">
                           <figcaption>{{ img.caption }}</figcaption>
