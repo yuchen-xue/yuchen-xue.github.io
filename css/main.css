@@ -280,6 +280,18 @@ aside li {
   display: flex; /* This is for HTML Whitespace Issues */
 }
 
+.author-list {
+  list-style: none;
+  flex-wrap: wrap; /* Allows items to wrap into new rows */
+  gap: 0.25rem; /* Space between items */
+  font-style: italic;
+}
+
+.author-list li {
+  display: flex;
+  margin-bottom: 0;
+}
+
 /* Skillbars */
 .skill-bar {
   width: 100%;
@@ -442,6 +454,16 @@ blockquote {
 
   .page-header ul {
     margin: 0.5rem 0;
+  }
+
+  .author-list {
+    gap: var(--spacing-inline);
+  }
+
+  .author-list li:not(:last-child)::after {
+    content: "|";
+    margin-left: var(--spacing-inline);
+    color: #ccc;
   }
 
   .inline-list {

@@ -263,7 +263,7 @@
                   {% if pub.journal %}<p>{{ pub.journal }}</p>{% endif %}
                   {% if pub.authors %}
                     <h4>Authors</h4>
-                    <ul>
+                    <ul class="author-list flex-responsive">
                       {% for author in pub.authors %}<li>{{ author }}</li>{% endfor %}
                     </ul>
                   {% endif %}
