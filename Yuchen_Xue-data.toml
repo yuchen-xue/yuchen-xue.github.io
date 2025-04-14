@@ -51,18 +51,11 @@ highlights = [
     "Collaborated with my colleagues using a version control repository;",
 ]
 project_url = "https://drive.google.com/file/d/1IgSa0M2NDEWVdC4OKki5OhgfwNIk9P7o"
-
-[[sections.work_experience.images]]
-img_path = "portfolio_media/IFF-assembly-pairs-640x360.jpg"
-caption = "Camera views and CAD screenshots of one specific Air-Adapter"
-
-[[sections.work_experience.images]]
-img_path = "portfolio_media/IFF-collecting-assembly-data-640x360.jpg"
-caption = "A turbine assembly is sent to a special rotary device for sampling"
-
-[[sections.work_experience.images]]
-img_path = "portfolio_media/IFF-mask-overlay-640x360.jpg"
-caption = "Segmentation result of an Air-Adapter"
+images = [
+    {img_path = "portfolio_media/IFF-assembly-pairs-640x360.jpg", caption = "Camera views and CAD screenshots of one specific Air-Adapter"},
+    {img_path = "portfolio_media/IFF-collecting-assembly-data-640x360.jpg", caption = "A turbine assembly is sent to a special rotary device for sampling"},
+    {img_path = "portfolio_media/IFF-mask-overlay-640x360.jpg", caption = "Segmentation result of an Air-Adapter"}
+]
 
 [[sections.education]]
 institution = "University of Rostock"
@@ -153,14 +146,10 @@ highlights = [
 ]
 keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
 url = "https://drive.google.com/file/d/15f7D6jnN9LGYLLqLOWl_LGaV0nfbShQ_"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "portfolio_media/face-recognition-definition-640x360.jpg"
-caption = "A face recognition problem is defined as finding matching identities from gallery images"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "portfolio_media/face-recognition-evaluation-640x360.jpg"
-caption = "Evaluation of the face recognition performance using ROC curve and AUC score"
+images = [
+    {img_path = "portfolio_media/face-recognition-definition-640x360.jpg", caption = "A face recognition problem is defined as finding matching identities from gallery images"}, 
+    {img_path = "portfolio_media/face-recognition-evaluation-640x360.jpg", caption = "Evaluation of the face recognition performance using ROC curve and AUC score"}
+]
 
 [[sections.technical_projects."deep_learning_computer_vision"]]
 title = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
@@ -176,14 +165,10 @@ highlights = [
 ]
 keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
 url = "https://drive.google.com/file/d/19ZKLEMbkXMSyqFEvCcKnIaBZ6liYutBf"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "portfolio_media/Re-id-definition-640x360.jpg"
-caption = "Illustration of a person re-identification problem"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "portfolio_media/IPAF-architecture-640x360.jpg"
-caption = "Architecture of the proposed model"
+images = [
+    {img_path = "portfolio_media/Re-id-definition-640x360.jpg", caption = "Illustration of a person re-identification problem"},
+    {img_path = "portfolio_media/IPAF-architecture-640x360.jpg", caption = "Architecture of the proposed model"}
+]
 
 [[sections.technical_projects."deep_learning_computer_vision"]]
 title = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
@@ -203,14 +188,10 @@ keywords = [
     "Object detection",
 ]
 url = "https://youtu.be/atY2ef5Eyfc"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "https://i.imgur.com/XTuqJmK.gif"
-caption = "Detection result of the re-trained model"
-
-[[sections.technical_projects."deep_learning_computer_vision".images]]
-img_path = "https://i.imgur.com/IxPXNJb.gif"
-caption = "Detection result of the baseline model"
+images = [
+    {img_path = "https://i.imgur.com/XTuqJmK.gif", caption = "Detection result of the re-trained model"},
+    {img_path = "https://i.imgur.com/IxPXNJb.gif", caption = "Detection result of the baseline model"}
+]
 
 [[sections.technical_projects."data_engineering"]]
 title = "Energy consumption analysis on a real-life dataset using R language"
@@ -228,10 +209,9 @@ keywords = [
     "Generalized Additive Model (GAM)",
 ]
 url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
-
-[[sections.technical_projects."data_engineering".images]]
-img_path = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM_files/figure-html/unnamed-chunk-32-1.png"
-caption = "Prediction of the electricity consumption based on the dataset"
+images = [
+    {img_path = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM_files/figure-html/unnamed-chunk-32-1.png", caption = "Prediction of the electricity consumption based on the dataset"}
+]
 
 [[sections.technical_projects."data_engineering"]]
 title = "Online R Tutorial Website based on Quarto"
@@ -265,14 +245,10 @@ keywords = [
     "RESTful API",
 ]
 url = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
-
-[[sections.technical_projects."software_development_embedded_systems".images]]
-img_path = "https://i.imgur.com/CE9ElyB.gif"
-caption = "Demonstration of this web application"
-
-[[sections.technical_projects."software_development_embedded_systems".images]]
-img_path = "portfolio_media/Springboot-detection-result-640x360.jpg"
-caption = "Example detection result"
+images = [
+    {img_path = "https://i.imgur.com/CE9ElyB.gif", caption = "Demonstration of this web application"},
+    {img_path = "portfolio_media/Springboot-detection-result-640x360.jpg", caption = "Example detection result"}
+]
 
 [[sections.technical_projects."software_development_embedded_systems"]]
 title = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
@@ -288,10 +264,9 @@ highlights = [
 ]
 keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
 url = "https://www.youtube.com/playlist?list=PLm7BNris7zlr3DjjrymRWPbd3Gzyv5SCB"
-
-[[sections.technical_projects."software_development_embedded_systems".images]]
-img_path = "portfolio_media/YSIS-architecture-640x360.jpg"
-caption = "The architecture of the system"
+images = [
+    {img_path = "portfolio_media/YSIS-architecture-640x360.jpg", caption = "The architecture of the system"}
+]
 
 [[sections.technical_projects."software_development_embedded_systems"]]
 title = "Simple Quadcopter based on Arduino"
@@ -305,14 +280,10 @@ highlights = [
     "This project won the best Final Year Project of the Department of Electrical Engineering of Thunhai University",
 ]
 keywords = ["Control system", "Unmanned aerial vehicle", "Arduino", "C"]
-
-[[sections.technical_projects."software_development_embedded_systems".images]]
-img_path = "portfolio_media/quadcopter-640x360.jpg"
-caption = "The fully-assembled quadcopter"
-
-[[sections.technical_projects."software_development_embedded_systems".images]]
-img_path = "portfolio_media/quadcopter-controller-GUI-640x360.jpg"
-caption = "The user interface of the quadcopter controller"
+images = [
+    {img_path = "portfolio_media/quadcopter-640x360.jpg", caption = "The fully-assembled quadcopter"},
+    {img_path = "portfolio_media/quadcopter-controller-GUI-640x360.jpg", caption = "The user interface of the quadcopter controller"}
+]
 
 [[sections.publications]]
 title = "Improved Part-aligned Deep Features Learning for Person Re-Identification"
