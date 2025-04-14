@@ -145,8 +145,8 @@
               {% for project in sections.technical_projects.deep_learning_computer_vision %}
                 <section>
                   <h3>
-                    {% if project.url %}
-                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% if project.external_links %}
+                      <a href="{{ project.external_links[0].url }}">{{ project.title }}</a>
                     {% else %}
                       {{ project.title }}
                     {% endif %}
@@ -181,8 +181,8 @@
               {% for project in sections.technical_projects.data_engineering %}
                 <section>
                   <h3>
-                    {% if project.url %}
-                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% if project.external_links %}
+                      <a href="{{ project.external_links[0].url }}">{{ project.title }}</a>
                     {% else %}
                       {{ project.title }}
                     {% endif %}
@@ -217,8 +217,8 @@
               {% for project in sections.technical_projects.software_development_embedded_systems %}
                 <section>
                   <h3>
-                    {% if project.url %}
-                      <a href="{{ project.url }}">{{ project.title }}</a>
+                    {% if project.external_links %}
+                      <a href="{{ project.external_links[0].url }}">{{ project.title }}</a>
                     {% else %}
                       {{ project.title }}
                     {% endif %}

@@ -87,8 +87,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("url") {
-        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
+      #if proj.keys().contains("external_links") {
+        [/ Link: #link(proj.external_links.at(0).url)[#proj.external_links.at(0).display_text]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]
@@ -109,8 +109,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("url") {
-        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
+      #if proj.keys().contains("external_links") {
+        [/ Link: #link(proj.external_links.at(0).url)[#proj.external_links.at(0).display_text]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]
@@ -131,8 +131,8 @@
       #if proj.keys().contains("highlights") {
         list(..proj.highlights)
       }
-      #if proj.keys().contains("url") {
-        [/ Link: #link(proj.url)[#proj.url.split("/").at(-1)]]
+      #if proj.keys().contains("external_links") {
+        [/ Link: #link(proj.external_links.at(0).url)[#proj.external_links.at(0).display_text]]
       }
       #if proj.keys().contains("keywords") {
         [/ Keywords: #for word in proj.keywords [#emph(word), ]]

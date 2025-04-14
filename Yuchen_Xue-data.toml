@@ -145,7 +145,9 @@ highlights = [
     "Use of experimental method for comparing the performance of different models",
 ]
 keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
-url = "https://drive.google.com/file/d/15f7D6jnN9LGYLLqLOWl_LGaV0nfbShQ_"
+external_links = [
+    {url = "https://drive.google.com/file/d/15f7D6jnN9LGYLLqLOWl_LGaV0nfbShQ_", display_text = "Presentation slides"},
+]
 images = [
     {img_path = "portfolio_media/face-recognition-definition-640x360.jpg", caption = "A face recognition problem is defined as finding matching identities from gallery images"}, 
     {img_path = "portfolio_media/face-recognition-evaluation-640x360.jpg", caption = "Evaluation of the face recognition performance using ROC curve and AUC score"}
@@ -164,7 +166,9 @@ highlights = [
     "Use of experimental method for comparing the performance of different models",
 ]
 keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
-url = "https://drive.google.com/file/d/19ZKLEMbkXMSyqFEvCcKnIaBZ6liYutBf"
+external_links = [
+    {url = "https://drive.google.com/file/d/19ZKLEMbkXMSyqFEvCcKnIaBZ6liYutBf", display_text = "Presentation slides"}
+]
 images = [
     {img_path = "portfolio_media/Re-id-definition-640x360.jpg", caption = "Illustration of a person re-identification problem"},
     {img_path = "portfolio_media/IPAF-architecture-640x360.jpg", caption = "Architecture of the proposed model"}
@@ -187,7 +191,9 @@ keywords = [
     "Transfer learning",
     "Object detection",
 ]
-url = "https://youtu.be/atY2ef5Eyfc"
+external_links = [
+    {url = "https://youtu.be/atY2ef5Eyfc", display_text = "Video demonstration"},
+]
 images = [
     {img_path = "https://i.imgur.com/XTuqJmK.gif", caption = "Detection result of the re-trained model"},
     {img_path = "https://i.imgur.com/IxPXNJb.gif", caption = "Detection result of the baseline model"}
@@ -208,7 +214,9 @@ keywords = [
     "Regression model",
     "Generalized Additive Model (GAM)",
 ]
-url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
+external_links = [
+    {url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html", display_text = "Website demonstration"},
+]
 images = [
     {img_path = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM_files/figure-html/unnamed-chunk-32-1.png", caption = "Prediction of the electricity consumption based on the dataset"}
 ]
@@ -244,7 +252,9 @@ keywords = [
     "Gradle",
     "RESTful API",
 ]
-url = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection"
+external_links = [
+    {url = "https://github.com/yuchen-xue/Spring-MySQL-TF-Detection", display_text = "Github repository"},
+]
 images = [
     {img_path = "https://i.imgur.com/CE9ElyB.gif", caption = "Demonstration of this web application"},
     {img_path = "portfolio_media/Springboot-detection-result-640x360.jpg", caption = "Example detection result"}
@@ -263,7 +273,9 @@ highlights = [
     "The implementation of smile detection based on OpenCV.",
 ]
 keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
-url = "https://www.youtube.com/playlist?list=PLm7BNris7zlr3DjjrymRWPbd3Gzyv5SCB"
+external_links = [
+    {url = "https://www.youtube.com/playlist?list=PLm7BNris7zlr3DjjrymRWPbd3Gzyv5SCB", display_text = "Video demonstration"},
+]
 images = [
     {img_path = "portfolio_media/YSIS-architecture-640x360.jpg", caption = "The architecture of the system"}
 ]
