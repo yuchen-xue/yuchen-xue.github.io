@@ -305,7 +305,7 @@
       dy: -design-page-top-margin / 2,
       text(
         [
-          _Last updated on #datetime.today().display("[day] [month repr:short]. [year]")_
+          _Rendered by #underline(link("https://typst.app/")[Typst]) on #datetime.today().display("[day] [month repr:short]. [year]")_
         ],
         fill: design-colors-last-updated-date-and-page-numbering,
         size: 0.9em,
