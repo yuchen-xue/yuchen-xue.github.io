@@ -43,7 +43,7 @@
 
 #for edu in cv_data.sections.education {
   entry(
-    title: [*#edu.institution* - #emph(edu.degree), #edu.area - #edu.location], 
+    title: [*#edu.institution* - #emph(edu.study_program) - #edu.location], 
     start_date: edu.start_date, 
     end_date: 
       // When `end_date` is not defined, it stands for an ongoing activity
@@ -186,6 +186,11 @@
     title: [*#activity.title* - #activity.location], 
     start_date: activity.start_date, 
     end_date: activity.end_date,
-    entry_content: activity.summary
+    entry_content: [
+      #activity.summary
+      #if activity.keys().contains("highlights") {
+        list(..activity.highlights)
+      }
+    ]
   )
 }

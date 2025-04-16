@@ -308,6 +308,11 @@
                     <p class="section-label">{{ exp.start_date }} - {{ exp.end_date }}, {{ exp.location }}</p>
                   {% endif %}
                   {% if exp.summary %}<p>{{ exp.summary }}</p>{% endif %}
+                  {% if exp.highlights %}
+                    <ul>
+                      {% for highlight in exp.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
                 </section>
               {% endfor %}
             </section>
@@ -331,8 +336,8 @@
                   {% if edu.location or edu.start_date or edu.end_date%}
                   <p class="section-label">{{ edu.start_date }} - {{edu.end_date}}</p>
                   {% endif %}
-                  {% if edu.degree or edu.area %}
-                    <span class="block"><i>{{ edu.degree }} - {{ edu.area }}</i></span>
+                  {% if edu.study_program %}
+                    <span class="block"><i>{{ edu.study_program }}</i></span>
                   {% endif %}
                   {% if edu.highlights %}
                     <h4>Highlights</h4>

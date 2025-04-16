@@ -39,18 +39,17 @@ fa_icon = "researchgate"
 [[sections.work_experience]]
 company = "Fraunhofer IFF"
 company_url = "https://www.iff.fraunhofer.de"
-position = "Technical assistant for a deep-learning-based defect detection solution"
+position = "Technical assistant"
 location = "Magdeburg (Germany)"
 start_date = "2023-05"
 end_date = "2024-04"
-summary = "I developed a deep-learning-based zero-shot solution for industry-level defect detection on different types of machinery parts. This solution features the comparison of image samples based on image segmentation technologies."
-highlights = [
-    "Solution for precise image segmentation of irregular machinery parts using computer vision algorithms;",
-    "97.6% precision on recognition tasks that was tested by a pre-defined dataset;",
-    "Deployment using Docker Compose;",
-    "Collaborated with my colleagues using a version control repository;",
-]
+summary = "I developed a deep learning-based zero-shot solution for industrial-level defect detection on different types of machine parts. This solution features accurate image segmentation of irregular machine parts using computer vision algorithms."
 project_url = "https://drive.google.com/file/d/1IgSa0M2NDEWVdC4OKki5OhgfwNIk9P7o"
+highlights = [
+    "Development of an automatic point prompts generating technique for indicating machine parts in images",
+    "Use of point prompts for assisting the process of mask generation",
+    "Achieved 97.6% accuracy in the task of recognizing images with defected parts",
+]
 images = [
     {img_path = "portfolio_media/IFF-assembly-pairs-640x360.jpg", caption = "Camera views and CAD screenshots of one specific Air-Adapter"},
     {img_path = "portfolio_media/IFF-collecting-assembly-data-640x360.jpg", caption = "A turbine assembly is sent to a special rotary device for sampling"},
@@ -60,54 +59,45 @@ images = [
 [[sections.education]]
 institution = "University of Rostock"
 url = "https://www.uni-rostock.de"
-area = "Computational Electrical Engineering"
-degree = "M.Sc."
+study_program = "Master's program of Computational Electrical Engineering"
 start_date = "2021-10"
 location = "Rostock (Germany)"
-highlights = ["Computational methods, Image processing"]
-
-[[sections.education]]
-institution = "Rhein-Waal University of Applied Science"
-url = "https://www.hochschule-rhein-waal.de"
-area = "Information Engineering and Computer Science"
-degree = "M.Sc."
-start_date = "2021-03"
-end_date = "2021-08"
-location = "Kleve (Germany)"
-highlights = ["Data engineering, Simulation technologies"]
+highlights = ["Topics: Computational methods, Image processing"]
 
 [[sections.education]]
 institution = "University of Groningen"
 url = "https://www.rug.nl"
-area = "Faculty of Science and Engineering"
-degree = "Exchange program"
+study_program = "Exchange study under the Faculty of Science and Engineering"
 start_date = "2020-02"
 end_date = "2020-08"
 location = "Groningen (the Netherlands)"
-highlights = ["Parallel Computing, Scalable Computing"]
+highlights = ["Topics: Parallel Computing, Scalable Computing"]
 
 [[sections.education]]
 institution = "National Taiwan University of Science and Technology"
 url = "https://www.ntust.edu.tw"
-area = "Electrical Engineering"
-degree = "M.Sc."
+study_program = "Master's program of Electrical Engineering"
 start_date = "2017-09"
 end_date = "2021-01"
 location = "Taipei (Taiwan)"
 highlights = [
-    "Top technical university in Taiwan",
-    "Deep Learning, Image processing, Data engineering",
+    "Graduated as M. Sc. Electrical Engineering",
+    "Master thesis: \"Survey on facial recognition models using deep learning technologies\"",
+    "Topics: Deep Learning, Image processing, Data engineering",
 ]
 
 [[sections.education]]
 institution = "Thunhai University"
 url = "https://www.thu.edu.tw"
-area = "Electrical Engineering"
-degree = "B.Sc."
+study_program = "Bachelor's program of Electrical Engineering"
 start_date = "2013-09"
 end_date = "2017-06"
 location = "Taipei (Taiwan)"
-highlights = ["Verilog HDL, Semiconductor, Microelectronics"]
+highlights = [
+    "Graduated as B. Sc. Electrical Engineering",
+    "Best bachelor project in the Department of Electrical Engineering of the year with the topic \"Self-navigable quadcopter based on Arduino and MultiWii\"",
+    "Topics: Verilog HDL, Semiconductor, Microelectronics",
+]
 
 [[sections.keynote_technical_skills]]
 label = "Programming Languages"
@@ -115,11 +105,11 @@ details = "Proficient with Python; good understanding with Java, C++ and R"
 
 [[sections.keynote_technical_skills]]
 label = "Machine Learning and Data Science Packages"
-details = "Good understanding with Pytorch, Tensorflow, OpenCV, Matplotlib, MySQL Server, Numpy, Pandas, Scikit Learn, Quarto"
+details = "Good understanding with computer vision, pattern matching, Pytorch, Tensorflow, OpenCV, Matplotlib, MySQL Server, Numpy, Pandas, Scikit Learn, Quarto"
 
 [[sections.keynote_technical_skills]]
 label = "Programming Frameworks and Tools"
-details = "Good understanding with Docker Compose, Spring Boot, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog"
+details = "Good understanding with Docker Compose, Spring Framework, Git & Github, Linux, Bash, Raspberry Pi; Basic understanding with Arduino, Android Dev, VPN technologies WSL2 & VM and Verilog"
 
 [[sections.language_skills]]
 label = "English - Fluent (C1)"
@@ -134,15 +124,15 @@ label = "Chinese - Native speaker (C2)"
 details = "Native Mandarin speaker"
 
 [[sections.technical_projects."deep_learning_computer_vision"]]
-title = "Master thesis: Survey on facial recognition models using deep learning technologies"
+title = "Master Thesis: \"Survey on Facial Recognition Models Using Deep Learning Technologies\""
 start_date = "2019-10"
 end_date = "2021-01"
 location = "Taipei (Taiwan)"
 summary = "This is an academic survey of different deep-learning based face recognition models, aiming at bringing insights to future researches in the field of deep learning."
 highlights = [
-    "Literal survey of numerous face recognition solutions",
-    "Summary of the fundamental differences of deep learning models",
-    "Use of experimental method for comparing the performance of different models",
+    "Literal survey of different face recognition models",
+    "Scientific analysis of the fundamental differences of selected solutions",
+    "Use of experimental method for comparing the performance of selected models",
 ]
 keywords = ["Face recognition", "deep learning", "PyTorch", "Tensorflow"]
 external_links = [
@@ -154,18 +144,17 @@ images = [
 ]
 
 [[sections.technical_projects."deep_learning_computer_vision"]]
-title = "Publication and Academic Speech with the topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
+title = "Publication and Academic Speech with the Topic \"Improved Part-aligned Deep Features Learning for Person Re-Identification\""
 start_date = "2018-07"
 end_date = "2019-09"
 location = "Taipei (Taiwan)"
-summary = "This is a solution to the challenge of person re-identification (Re-ID) problem. The Re-ID problem is about recognizing and matching pedestrians with different appearances across different cameras. Highlights:"
+summary = "This is a solution to the challenge of person re-identification (Re-ID) problem. The Re-ID problem is about recognizing and matching pedestrians with different appearances across different cameras."
 highlights = [
-    "Development of a solution to Re-ID problem using computer vision and deep learning methods",
-    "Contributed to the relative academic paper as the 2nd co-author. The paper accepted by the 16th IEEE International Conference on Advanced Video and Signal-based Surveillance (AVSS)",
-    "Delivered an academic speech on this conference",
-    "Use of experimental method for comparing the performance of different models",
+    "Development of a solution to Re-ID problem with the help of computer vision and deep learning methods",
+    "Contributed to a scientific paper, which was accepted by the 16th IEEE International Conference on Advanced Video and Signal-based Surveillance (AVSS)",
+    "Delivered a workshop speech on this conference",
 ]
-keywords = ["Cross-camera recognition", "Python", "deep learning", "TensorFlow"]
+keywords = ["Cross-camera recognition", "Person Re-ID", "deep learning"]
 external_links = [
     {url = "https://drive.google.com/file/d/19ZKLEMbkXMSyqFEvCcKnIaBZ6liYutBf", display_text = "Presentation slides"}
 ]
@@ -175,15 +164,14 @@ images = [
 ]
 
 [[sections.technical_projects."deep_learning_computer_vision"]]
-title = "Real-time pedestrian and vehicle detection on surveillance cameras video stream"
+title = "Real-Time Detection of Pedestrians and Vehicles in Video Streams of Surveillance Cameras"
 start_date = "2018-02"
 end_date = "2018-04"
 location = "Taipei (Taiwan)"
-summary = "A real-time object detection solution for real-time video streams written in C++."
+summary = "A deep learning based object detection solution for traffic monitoring inside the campus. Image data was manually collected, labelled and used for training a detector based on a pre-trained YOLOv3 model. The newly trained model shows significant improvement in our use case"
 highlights = [
     "Improvement of 20% in precision compared to the base model",
     "Improvement on small, obscured, and overlapping objects",
-    "I was in charge of data collection, sample labeling, and training a model",
     "Training of a reliable model with limited data using transfer learning technique",
 ]
 keywords = [
@@ -200,29 +188,30 @@ images = [
 ]
 
 [[sections.technical_projects."data_engineering"]]
-title = "Energy consumption analysis on a real-life dataset using R language"
+title = "Energy Consumption Analysis of a Commercial Building Using a Generalized Additive Model"
 start_date = "2018-04"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
-summary = "This is a project about analyzing and predicting real-world energy consumption data using Generalized Additive Model (GAM)."
+summary = "This project, which serves as the final project of the course \"Regression Analysis\", is about the analysis and prediction of the energy consumption in an office building using a Generalized Additive Model (GAM). Data used in this project is originated from an open source dataset, namely \"EnerNOC GreenButton Data\"."
 highlights = [
-    "Development of a GAM model with high capability of generalization;",
-    "The model has a MAPE (mean absolute percentage error) value of 14.89;",
+    "Implementation of a GAM model with high capability of generalization using R language",
+    "The model exhibits a MAPE (mean absolute percentage error) value of 14.89 when predicting the energy consumption of the next two weeks",
+    "Composing and hosting of a HTML report using R language, Quarto and Github Action",
 ]
 keywords = [
     "R language",
-    "Regression model",
-    "Generalized Additive Model (GAM)",
+    "Energy consumption analysis",
+    "GAM",
 ]
 external_links = [
-    {url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html", display_text = "Website demonstration"},
+    {url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html", display_text = "Online report"},
 ]
 images = [
     {img_path = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM_files/figure-html/unnamed-chunk-32-1.png", caption = "Prediction of the electricity consumption based on the dataset"}
 ]
 
 [[sections.technical_projects."data_engineering"]]
-title = "Online R Tutorial Website based on Quarto"
+title = "Online R Tutorial Website Based on Quarto"
 start_date = "2024-09"
 end_date = "2024-10"
 location = "Rostock (Germany)"
@@ -235,11 +224,11 @@ keywords = ["Quarto", "R language", "Github Actions"]
 url = "https://yuchen-xue.com/Learn-R-Quarto"
 
 [[sections.technical_projects."software_development_embedded_systems"]]
-title = "Java Spring Boot application for image object detection"
+title = "Web Application for Image Object Detection Based on Spring Framework"
 start_date = "2018-01"
 end_date = "2018-03"
 location = "Taipei (Taiwan)"
-summary = "A Restful API for object detection based on Spring Framework and MySql server."
+summary = "A web application for hosting a deep learning based image object detection with the following function: a user can upload an image and download a new image with bounding boxes, with the detection result is stored in a database."
 highlights = [
     "Implementation of the Spring Boot backend;",
     "Deployment of an object detection model using TensorFlow for Java;",
@@ -249,7 +238,6 @@ keywords = [
     "Spring framework",
     "SQL database",
     "Model deployment",
-    "Gradle",
     "RESTful API",
 ]
 external_links = [
@@ -261,16 +249,16 @@ images = [
 ]
 
 [[sections.technical_projects."software_development_embedded_systems"]]
-title = "\"You Smile I Serve\" – A concept of smart restaurant using Raspberry-Pi"
+title = "\"You Smile I Serve\" – A Concept of Smart Restaurant Based on Raspberry-Pi and Python"
 start_date = "2018-03"
 end_date = "2018-06"
 location = "Taipei (Taiwan)"
-summary = "A hardware and software integration using Raspberry Pi."
+summary = "This project is a prototype of an intelligent restaurant that provides a better customer experience when ordering. A customer is encouraged to smile to a camera to trigger a chatbot and can order their food by talking to this chatbot. A GUI was also developed for the restaurant owner to keep track of customer orders. The main components include a Raspberry Pi single board computer, a microphone, a webcam and a Pi-camera."
 highlights = [
-    "The design of the whole software and hardware structure;",
-    "The implementation of a voice recognition technique through cloud platform;",
-    "The implementation of a QR code reading technique;",
-    "The implementation of smile detection based on OpenCV.",
+    "The design of the whole software and hardware structure",
+    "Software implementation of smile detection and QR code reading",
+    "Use of Google Cloud Platform API for implementing the voice recognition function",
+    "Development of a user interface for managing customer's order",
 ]
 keywords = ["Raspberry Pi", "OpenCV", "Cloud platform"]
 external_links = [
@@ -281,15 +269,15 @@ images = [
 ]
 
 [[sections.technical_projects."software_development_embedded_systems"]]
-title = "Simple Quadcopter based on Arduino"
+title = "Bachelor Project: \"Self-Navigable Quadcopter based on Arduino and MultiWii\""
 start_date = "2016-02"
 end_date = "2016-06"
 location = "Taichung (Taiwan)"
-summary = "A simple quadcopter based on Arduino."
+summary = "A collaborative project aims to build a quadcopter capable of navigating along a pre-defined route. This project won the best bachelor project of the Department of Electrical Engineering of Thunhai University during the year 2016."
 highlights = [
-    "A collaboration work of assemble of a quadcopter from scratch",
-    "Programming, design of control system and testing of the quadcopter",
-    "This project won the best Final Year Project of the Department of Electrical Engineering of Thunhai University",
+    "Assemble of a quadcopter from hardware components, including a control board, motors, propeller, a frame and a battery",
+    "Programming and testing of the control system",
+    "Attempt of implementing a software program for the auto-piloting function",
 ]
 keywords = ["Control system", "Unmanned aerial vehicle", "Arduino", "C"]
 images = [
@@ -334,7 +322,7 @@ label = "Driving license"
 details = "German driving license Class B"
 
 [[sections.certificate_and_award]]
-title = "Certificate: Qualification Program -- Statistics Software R (advanced)"
+title = "Qualification Program -- Statistics Software R (advanced)"
 date = "2024-09"
 location = "Rostock (Germany)"
 summary = "A 4-day workshop that features multiple theoretical topics and practical sessions related to multiple statistics topics, including linear model, anova, mean comparison with post-hoc tests, experimental designs and professional illustration"
@@ -343,7 +331,7 @@ summary = "A 4-day workshop that features multiple theoretical topics and practi
 title = "The best annual final year project of the Department of Electrical Engineering"
 date = "2016-08"
 location = "Taichung (Taiwan)"
-summary = "“A Simple Quadcopter using Arduino” was granted as the best annual final year project of the Department of Electrical Engineering at Thunhai University"
+summary = "\"Self-Navigable Quadcopter based on Arduino and MultiWii\" was granted as the best annual final year project of the Department of Electrical Engineering at Thunhai University"
 
 [[sections.certificate_and_award]]
 title = "Calculus Competition at Thunghai University"
@@ -352,15 +340,13 @@ location = "Taichung (Taiwan)"
 summary = "Won a prize in the Calculus Competition held by the Department of Applied Mathematics at Thunhai University"
 
 [[sections.volunteer_experiences]]
-title = "Teaching assistant of the course “Logic Design Laboratory”"
-summary = "I volunteered as a teaching assistant for the practical session of the course “Logic Design”. During this practical session, each student is required to learn the coding skills of the Verilog language (a hardware description language) and to complete tasks relating to the implementation of various logic units using FPGA development. My role was to introduce each assignment to the students and assist them when needed."
-location = "Taichung (Taiwan)"
+title = "Teaching assistant of practice sessions"
 start_date = "2015-09"
 end_date = "2017-06"
-
-[[sections.volunteer_experiences]]
-title = "Teaching assistant of the course \"Introduction to Cyber-Physical System\""
-summary = "I volunteered as a teaching assistant for this course “Regression Analysis”. During this practical session, where each student is required to learn the coding skill of the Python language and complete tasks using Raspberry Pi single board computer. My role was to introduce each assignment to the students and assist them when needed."
-location = "Taichung (Taiwan)"
-start_date = "2015-09"
-end_date = "2017-06"
+location = "Taipei and Taichung (Taiwan)"
+summary = "I volunteered as a teaching assistant for three courses during my study at Thunghai University (Taichung, Taiwan) and National Taiwan University of Science and Technology (Taipei, Taiwan). My role was to introduce each assignment to the students, as well as to assist them during the practice session. Summary of these course:"
+highlights = [
+    "\"Logic Design Laboratory\" -- Verilog HDL language programming using FPGA",
+    "\"Introduction to Cyber-Physical System\" -- Python programming on Raspberry Pi",
+    "\"Regression Analysis\" -- Theory of linear regression model and practices of R language",
+]
