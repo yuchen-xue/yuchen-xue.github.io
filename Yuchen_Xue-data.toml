@@ -294,8 +294,10 @@ authors = [
     "Ruei-Shan Chan",
 ]
 journal = "16th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)"
-doi = "10.1109/AVSS.2019.8909867"
 date = "2019-11-25"
+page_number = "1-8"
+publisher = "IEEE"
+doi = "10.1109/AVSS.2019.8909867"
 
 [[sections.publications]]
 title = "Cloud Encryption Using Distributed Environmental Keys"
@@ -310,8 +312,10 @@ authors = [
     "Guan-Chi Lai",
 ]
 journal = "10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS)"
-doi = "10.1109/IMIS.2016.73"
 date = "2016-12-22"
+page_number = "476-481"
+publisher = "IEEE"
+doi = "10.1109/IMIS.2016.73"
 
 [[sections.miscellaneous]]
 label = "Hobbies"

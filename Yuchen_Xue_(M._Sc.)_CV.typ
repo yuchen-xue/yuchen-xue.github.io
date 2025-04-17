@@ -127,19 +127,28 @@
 == Publications
 
 #for pub in cv_data.sections.publications {
+  let (..authors, last) = pub.authors
+  let pub_year = pub.date.split("-").at(0)
+
   entry(
     title: strong(pub.title),
     start_date: pub.date, 
     entry_content: 
       [
-        #for author in pub.authors {
+        #for author in authors {
           if author == cv_data.header.name {
             [#emph(author), ]
           } else {
             [#author, ]
           }
         }
-        #link("https://doi.org/"+pub.doi)[#pub.doi] (#pub.journal)
+        #if last == cv_data.header.name{
+          [#emph(last).]
+        } else {
+          [#last.]
+        }
+        "#pub.title." In #emph([#pub_year #pub.journal]), pp. #pub.page_number. #pub.publisher, #pub_year. 
+        (#link("https://doi.org/"+pub.doi)[#pub.doi])
     ]
   )
 }
