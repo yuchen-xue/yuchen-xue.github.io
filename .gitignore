@@ -16,4 +16,4 @@ __pycache__/
 
 # Workspace files:
 *.pdf
-index.html
+_site/

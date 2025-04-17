@@ -3,7 +3,7 @@ name = "Yuchen Xue"
 label = "M. Sc. Electrical Engineering"
 profile_picture = "profile_picture.jpg"
 introduction = "I have a strong background in deep learning, computer vision, and data engineering. I am passionate about applying my skills to solve real-world problems and contribute to innovative projects."
-website = "https://yuchen-xue.notion.site/Yuchen-Xue-M-Sc-d20b6d8537bf45b5aee1dd2a72ff6bd6"
+website = "https://yuchen-xue.com"
 
 [header.contact]
 residence = "Rostock, Germany"
@@ -177,7 +177,7 @@ keywords = [
     "Regression model",
     "Generalized Additive Model (GAM)",
 ]
-url = "https://yuchen-xue.github.io/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
+url = "https://yuchen-xue.com/Learn-R-Quarto/content/linear-model/EnerNOC-GAM.html"
 
 [[sections.technical_projects."data_engineering"]]
 title = "Online R Tutorial Website based on Quarto"
@@ -190,7 +190,7 @@ highlights = [
     "Automated deployment using Github Action",
 ]
 keywords = ["Quarto", "R language", "Github Actions"]
-url = "https://yuchen-xue.github.io/Learn-R-Quarto"
+url = "https://yuchen-xue.com/Learn-R-Quarto"
 
 [[sections.technical_projects."software_development_embedded_systems"]]
 title = "Java Spring Boot application for image object detection"
