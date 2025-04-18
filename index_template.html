@@ -47,12 +47,24 @@
     <!-- Preconnect for Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" crossorigin="anonymous">
 
+    <!-- Preconnect for Github Ribbon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
   </head>
 
   <body>
     <header class="page-header">
       <div class="container">
         <div class="header-top flex-responsive">
+
+          <a class="github-fork-ribbon" 
+            href="https://github.com/yuchen-xue/yuchen-xue.github.io" 
+            data-ribbon="View on GitHub" 
+            title="View the source code on GitHub" 
+            target="_blank">
+            View on GitHub
+          </a>
+
           {% if header.picture.profile_picture_portfolio %}
             <img class="header-image"
                  width="256"
