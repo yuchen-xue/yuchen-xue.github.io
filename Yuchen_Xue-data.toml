@@ -43,17 +43,33 @@ position = "Technical assistant"
 location = "Magdeburg (Germany)"
 start_date = "2023-05"
 end_date = "2024-04"
-summary = "I developed a deep learning-based zero-shot solution for industrial-level defect detection on different types of machine parts. This solution features accurate image segmentation of irregular machine parts using computer vision algorithms."
+summary = "I developed a industrial-level defect detection solution based on an existing neural network, achieving an AUC score of 97.6% with limited amount of data. This solution features a technique for automatically producing point prompt, which improves the performance of image segmentation on low-contrast images of irregular machinery parts."
 project_url = "https://drive.google.com/file/d/1IgSa0M2NDEWVdC4OKki5OhgfwNIk9P7o"
 highlights = [
-    "Development of an automatic point prompts generating technique for indicating machine parts in images",
-    "Use of point prompts for assisting the process of mask generation",
-    "Achieved 97.6% accuracy in the task of recognizing images with defected parts",
+    "Improved segmentation result through automatic point prompt generation",
+    "A reliable solution unaffected by poor image quality",
+    "High performance regardless of irregular shapes of different machine parts",
+    "Zero-shot solution without the involvement of a large dataset",
+    "Enhanced quality control in industrial processes",
 ]
 images = [
     {img_path = "portfolio_media/IFF-assembly-pairs-640x360.jpg", caption = "Camera views and CAD screenshots of one specific Air-Adapter"},
     {img_path = "portfolio_media/IFF-collecting-assembly-data-640x360.jpg", caption = "A turbine assembly is sent to a special rotary device for sampling"},
     {img_path = "portfolio_media/IFF-mask-overlay-640x360.jpg", caption = "Segmentation result of an Air-Adapter"}
+]
+
+[[sections.lab_experience]]
+institution = "Interactive Context Laboratory (National Taiwan University of Science and Technology)"
+location = "Taipei (Taiwan)"
+start_date = "2018-01"
+end_date = "2021-01"
+summary = "As part of my master's study, I joined my supervisor's research team, namely \"Interactive Context Laboratory\", where I participated in several research projects related to deep learning, data analysis and computer vision. I gained strong programming skills and learned how to integrate into a interdisciplinary research team."
+highlights = [
+    "Experience with programming using Python, Java, C++, R language and GPU",
+    "Publication and workshop speech of a human re-identification solution at an IEEE international conference",
+    "Survey of deep learning based face recognition solutions, including performance analysis and architecture insights",
+    "A real-time object detection solution based on transfer learning",
+    "Energy consumption analysis and prediction of a commercial building, achieving a MAPE value of 14.89 over 14-day forecasts.",
 ]
 
 [[sections.education]]

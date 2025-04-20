@@ -70,6 +70,22 @@
   )
 }
 
+== Laboratory Experience
+
+#for exp in cv_data.sections.lab_experience {
+  entry(
+    title: [*#exp.institution* - #emph(exp.location)], 
+    start_date: exp.start_date, 
+    end_date: exp.end_date,
+    entry_content: [
+      #exp.summary
+      
+      #underline([_Highlights:_])
+      #list(..exp.highlights)
+    ]
+  )
+}
+
 == Education
 
 #for edu in cv_data.sections.education {
