@@ -1,0 +1,186 @@
+[header]
+name = "Yuchen XUE"
+label = "M. Sc. Electrical Engineering / PhD Candidate"
+introduction = "I have a strong background in deep learning, computer vision, and data engineering. I am passionate about applying my skills to solve real-world problems and contribute to innovative projects."
+website = "https://yuchen-xue.com"
+
+[header.picture]
+# Insert your own profile picture for the CV
+profile_picture_cv = "profile-picture-CV.jpg"
+profile_picture_portfolio = "profile-picture-portfolio.jpg"
+
+[header.contact]
+residence = "La Rochelle, France"
+email_ulr = "yuchen.xue@univ.lr.fr"
+email_usth = "xuey.2060022@usth.edu.vn"
+# Use your own phone number
+phone = "+33 7 49 00 67 21"
+
+[[header.social_networks]]
+url = "https://linkedin.com/in/sean-yuchen-xue"
+display_text = "sean-yuchen-xue"
+fa_icon = "linkedin"
+
+[[header.social_networks]]
+url = "https://github.com/yuchen-xue"
+display_text = "yuchen-xue"
+fa_icon = "github"
+
+[[header.social_networks]]
+url = "https://www.xing.com/profile/Yuchen_Xue2"
+display_text = "Yuchen_Xue2"
+fa_icon = "xing"
+
+[[header.social_networks]]
+url = "https://researchgate.net/profile/Yuchen-Xue-6"
+display_text = "Yuchen-Xue-6"
+fa_icon = "researchgate"
+
+[sections]
+
+[[sections.lab_experience]]
+institution = "Laboratoire Informatique, Image et Interaction (L3i)"
+location = "La Rochelle (France)"
+start_date = "2025-11"
+end_date = "2028-11"
+summary = "I'm currently doing my research topic: \"Detection, Recognition, and Tracking of Marine Species Using Video Analysis: Toward Dynamic Population Estimation for Biodiversity Conservation\"."
+highlights = [
+    "Use of an existing LLM (Large Language Model) to create image dataset from raw video frames",
+    "Use of labelled data to train a classifier that is specific for distinguishing the visual differences between objects",
+    "The current solution shows a potential of solving the re-appearance problem of free-moving marine creatures",
+]
+
+[[sections.education]]
+institution = "La Rochelle Université"
+url = "https://www.univ-larochelle.fr"
+study_program = "European doctoral programme \"EU-DOCS for SmUCS\"."
+start_date = "2025-11"
+end_date = "2028-11"
+location = "La Rochelle (France)"
+
+[[sections.education]]
+institution = "University of science and technology of Hanoi (USTH)"
+url = "https://https://usth.edu.vn/"
+study_program = "European doctoral programme \"EU-DOCS for SmUCS\" (cotutelle agreement)."
+start_date = "2025-11"
+end_date = "2028-11"
+location = "Hanoi (Vietnam)"
+highlights = ["Topics: Detection, Tracking, Re-Identification, Marine Environment"]
+
+[[sections.education]]
+institution = "University of Rostock"
+url = "https://www.uni-rostock.de"
+study_program = "Master's program of Computational Electrical Engineering"
+start_date = "2021-10"
+end_date = "2024-08"
+location = "Rostock (Germany)"
+highlights = ["Topics: Computational methods, Image processing"]
+
+[[sections.education]]
+institution = "University of Groningen"
+url = "https://www.rug.nl"
+study_program = "Exchange study under the Faculty of Science and Engineering"
+start_date = "2020-02"
+end_date = "2020-08"
+location = "Groningen (the Netherlands)"
+highlights = ["Topics: Parallel Computing, Scalable Computing"]
+
+[[sections.education]]
+institution = "National Taiwan University of Science and Technology"
+url = "https://www.ntust.edu.tw"
+study_program = "Master's program of Electrical Engineering"
+start_date = "2017-09"
+end_date = "2021-01"
+location = "Taipei (Taiwan)"
+highlights = [
+    "Graduated as M. Sc. Electrical Engineering",
+    "Master thesis: \"Survey on facial recognition models using deep learning technologies\"",
+    "Topics: Deep Learning, Image processing, Data engineering",
+]
+
+[[sections.education]]
+institution = "Thunhai University"
+url = "https://www.thu.edu.tw"
+study_program = "Bachelor's program of Electrical Engineering"
+start_date = "2013-09"
+end_date = "2017-06"
+location = "Taipei (Taiwan)"
+highlights = [
+    "Graduated as B. Sc. Electrical Engineering",
+    "Best bachelor project in the Department of Electrical Engineering of the year with the topic \"Self-navigable quadcopter based on Arduino and MultiWii\"",
+    "Topics: Verilog HDL, Semiconductor, Microelectronics",
+]
+
+[[sections.training_courses]]
+title = "Research integrity in scientific professions"
+date = "2026-06"
+location = "Online"
+summary = "The aim of this training is to foster a culture of scientific integrity within institutions. It enables participants to adopt a critical approach and uphold the standards of integrity in scientific research."
+
+[[sections.training_courses]]
+title = "Strategic Data Management: DAMA-DMBOK Principles for Doctoral Research"
+date = "2026-06"
+location = "Online"
+summary = "Understand key principles of the DAMA-DMBOK framework and their application in research; apply data governance, quality, and security concepts to manage research data effectively; analyse data management challenges and propose solutions for academic and professional contexts"
+
+[[sections.training_courses]]
+title = "French for Academic and Professional Purposes"
+date = "2026-05"
+location = "La Rochelle (France)"
+summary = "To become more confident in using French: in everyday life, university studies, etc; to build self-confidence when speaking in front of a French-speaking audience; to improve written and spoken skills (comprehension and expression)."
+
+[[sections.training_courses]]
+title = "GIS and GeoAl"
+date = "2026-02"
+location = "Online"
+summary = "Exploration of geoportals and open geospatial data for environment; Knowledge of the principles of geospatial modeling; Understanding Geospatial Data Standards and GIS Interoperability."
+
+[[sections.academic_activities]]
+title = "EU-CONNEXUS's 6th PhD Summer School"
+date = "2026-07"
+location = "Nicosia (Cyprus)"
+summary = "The summer school was organized by the EU-CONEXUS European University Alliance, with a topic \"AI for Impact: From Smart Tools to Ethical Decision-Making.\" Throughout the week, the PhD students had the opportunity to exchange ideas, collaborate in international and interdisciplinary teams, and explore how artificial intelligence can support research across diverse scientific fields."
+
+[[sections.academic_activities]]
+title = "IRDTA'S 13th International School on Deep Learning"
+date = "2026-07"
+location = "Orleans (France)"
+summary = "The summer school was held with a global scope aiming at updating participants on the most recent advances in the critical and fast developing area of deep learning. This event covers topics including efficiency and robustness of the algorithms, explainability, transparency, interpretability, risks and safety, as well as important ethical concerns at the frontier of current knowledge that deserve careful multidisciplinary discussion."
+
+[[sections.academic_activities]]
+title = "Portathon 2026 -- International Port Technology Hackathon"
+date = "2026-09"
+location = "Nicosia (Cyprus)"
+summary = "An event to get to know challenges of the ports and meet enthusiasts that have the same interests as you and that care about the same technologies. I worked with people that come from different fields and solve real-world problems in a collaborative environment. A final pitch was presented to a jury of experts and the best solutions were awarded."
+
+[[sections.publications]]
+title = "Improved Part-aligned Deep Features Learning for Person Re-Identification"
+authors = [
+    "Sheng-Luen Chung",
+    "Yuchen Xue",
+    "Shih-Chao Chien",
+    "Ruei-Shan Chan",
+]
+journal = "16th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)"
+date = "2019-11-25"
+page_number = "1-8"
+publisher = "IEEE"
+doi = "10.1109/AVSS.2019.8909867"
+
+[[sections.publications]]
+title = "Cloud Encryption Using Distributed Environmental Keys"
+authors = [
+    "Kun-Lin Tsai",
+    "Fang-Yie Leu",
+    "Yi-Fung Huang",
+    "Chi Yang",
+    "Cheng-Hsin Chang",
+    "King-Shing Yip",
+    "Yuchen Xue",
+    "Guan-Chi Lai",
+]
+journal = "10th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS)"
+date = "2016-12-22"
+page_number = "476-481"
+publisher = "IEEE"
+doi = "10.1109/IMIS.2016.73"
