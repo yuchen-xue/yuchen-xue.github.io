@@ -1,6 +1,6 @@
 [project]
 name = "website-yuchen-xue"
-version = "0.1.0"
+version = "0.1.1"
 description = "My personal website based on Jinja2 and Toml"
 readme = "README.md"
 requires-python = ">=3.11"
